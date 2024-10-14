@@ -58,7 +58,7 @@ const Section1 = () => {
   }, [displayText, isDeleting, currentPhraseIndex, phrases, textLoaded]);
 
   return (
-    <div id="section1" className={` section1Container ${textLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-24'} flex flex-col items-center justify-center h-screen p-8 rounded-lg text-white text-center transition-all duration-700`}>
+    <div id="section1" className={` section1Container ${textLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-16'} flex flex-col items-center justify-center h-screen p-8 rounded-lg text-white text-center transition-all duration-800`}>
       <h1 className="Tfont text-4xl font-bold mb-4">A TASTE OF HOME</h1>
       <p className="text-xl mb-6">{constantText}</p>
       <p className="text-xl mb-6">{displayText}</p>

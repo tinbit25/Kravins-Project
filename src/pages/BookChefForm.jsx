@@ -32,9 +32,9 @@ const BookChefForm = () => {
   };
 
   return (
-    <div className="bg-gray-200 py-16 px-6">
+    <div className="py-16 px-6 text-white">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-8">Book Your Chef</h2>
+        <h2 className="text-4xl font-bold text-[#C9A581] mb-8">Book Your Chef</h2>
         <p className="text-lg mb-4">Savor Now and Satisfy Your Kravinz!</p>
 
         <form onSubmit={handleSubmit} className="space-y-6">

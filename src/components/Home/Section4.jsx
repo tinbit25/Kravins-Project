@@ -16,7 +16,7 @@ const Section4 = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center mb-8">
           <motion.div
-            className="w-64 h-64 mb-4 md:mb-0 md:mr-6"
+            className="w-96 h-96 mb-4 md:mb-0 md:mr-6"
             initial={{ scale: 0 }} // Initial scale for image
             whileInView={{ scale: 1 }} // Animate to full scale when in view
             transition={{ duration: 1.2, ease: [0.5, 0.1, 0.1, 0.9] }} // Slower scale effect
@@ -43,7 +43,7 @@ const Section4 = () => {
             </button>
           </motion.div>
           <motion.div
-            className="w-64 h-64 mb-4 md:mb-0 md:mr-6"
+            className="w-96 h-96 mb-4 md:mb-0 md:mr-6"
             initial={{ scale: 0 }} // Initial scale for image
             whileInView={{ scale: 1 }} // Animate to full scale when in view
             transition={{ duration: 1.2, ease: [0.5, 0.1, 0.1, 0.9] }} // Slower scale effect

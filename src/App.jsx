@@ -5,8 +5,9 @@ import Footer from './components/common/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import MealOrderPage from './pages/MealOrderPage';
 import BookChefForm from './pages/BookChefForm';
-import BecomeChefForm from './pages/BecomeChefForm';
+import BecomeAChef from './pages/BecomeAChef';
 import logoImage from './assets/images/Logo/white_orange_logo.png';
 import './index.css'; 
 
@@ -26,8 +27,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/menu" element={<BookChefForm />} />
-          <Route path="/order" element={<BookChefForm />} />
-          <Route path="/become-chef" element={<BecomeChefForm />} />
+          <Route path="/order" element={<MealOrderPage />} />
+          <Route path="/become-chef" element={<BecomeAChef />} />
         </Routes>
 <Footer/>
 </div>

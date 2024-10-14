@@ -67,8 +67,9 @@ const WhatMakesUsDifferent = () => {
   }, [currentIndex]); // Runs whenever currentIndex changes
 
   return (
-    <section className="what-makes-us-different pt-60 pb-10 px-60 relative">
+    <section className="what-makes-us-different pt-32 pb-10 px-60 relative">
       {/* Section Header */}
+      <div className="py-28 mb-10 border border-l-transparent border-r-transparent border-[#C9A581]">
       <h2 className="Tfont text-4xl font-bold text-center text-[#C9A581] mb-12">
         What Makes Us Different?
       </h2>
@@ -120,7 +121,7 @@ const WhatMakesUsDifferent = () => {
   </button>
 </div>
 
-      
+</div>
     </section>
   );
 };

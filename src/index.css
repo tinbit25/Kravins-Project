@@ -14,7 +14,7 @@ html{
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
-  background-color: transparent;
+  background-color: transparent; /* Make this solid if you want a background on scroll */
   z-index: 10; /* Ensures it stays above other content */
 }
 
@@ -22,7 +22,7 @@ html{
   display: flex;
   align-items: center;
   list-style: none;
-  padding: 20px;
+  padding: 0; /* Remove padding for a cleaner look */
   margin: 0;
 }
 
@@ -33,14 +33,15 @@ html{
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: white; /* Default link color */
   padding: 10px;
   font-size: 18px;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease, transform 0.3s ease; /* Added transform for scale effect */
 }
 
 .nav-links a:hover {
-  color: orange;
+  color: orange; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .nav-links a::after {
@@ -50,14 +51,20 @@ html{
   left: 0;
   width: 0;
   height: 2px;
-  background-color: orange;
-  transition: width 0.5s ease-in-out;
-  position: ;
+  background-color: orange; /* Underline color */
+  transition: width 0.5s ease-in-out; /* Smooth transition for the underline effect */
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+  width: 100%; /* Expand underline to full width on hover */
 }
+.nav-links a.active {
+  color: orange;
+  
+   
+  font-weight: bold; /* Optional: make active link bold */
+}
+
 
   .Tfont{
     font-family: 'Cormorant Garamond', sans-serif;
@@ -103,3 +110,4 @@ html{
     opacity: 0.7;
     
   }
+  

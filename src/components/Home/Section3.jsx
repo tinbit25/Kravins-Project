@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useRef } from 'react';
-import AfricanFood from '../../assets/images/Pngtree—plate african food_16036974.png';
+import AfricanFood from '../../assets/images/Pngtree—plate african food_16036974.webp';
 
 const Section3 = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,7 @@ const Section3 = () => {
         // Update visibility state based on intersection
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 } // Trigger when 10% of the section is visible
+      { threshold: 0.1 } // Trigger when 10% of the section is visible
     );
 
     if (sectionRef.current) {

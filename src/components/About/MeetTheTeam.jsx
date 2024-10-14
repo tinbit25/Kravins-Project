@@ -37,7 +37,7 @@ const MeetTheTeam = () => {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="relative p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gray-800 text-center group"
+            className="relative p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-[#1E1E1E] text-center group"
           >
             {/* Profile Image */}
             <img

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
 import bgImage from '../assets/images/bg.jpg';
+import { motion } from 'framer-motion';
 
 import Section1 from '../components/Home/Section1';
 import Section2 from '../components/Home/Section2';
@@ -12,16 +12,40 @@ import HowItWorks from '../components/Home/HowItWorks';
 const Home = () => {
   return (
     <>
-      {/* Navigation Links for Smooth Scrolling */}
-      
-      <div
-        className="h-screen bg-cover bg-center"
+      <motion.div
+        className="h-screen flex items-center justify-center relative overflow-hidden" // Center content and allow overflow
         style={{
-          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.4) 50%), url(${bgImage})`,
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: 0, 
         }}
       >
-        <Section1 />
-      </div>
+        {/* Background Image with Scaling Effect */}
+        <motion.div
+          className="absolute inset-0" // Cover the entire parent
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }} // Slightly scale up
+          transition={{
+            duration: 10,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          style={{
+            backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            zIndex: -1, // Ensure it's behind other content
+          }}
+        />
+        
+        {/* Text Section */}
+        <div className="relative z-10"> {/* Ensure text is above the gradient */}
+          <Section1 />
+        </div>
+      </motion.div>
+
       <HowItWorks id="how-it-works" />
       <Section2 id="section2" />
       <Section3 id="section3" />

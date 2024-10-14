@@ -1,27 +1,57 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-transparent">
-      <ul className="nav-links bg-transparent">
+    <nav className="navbar">
+      <ul className="nav-links">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">About Us</Link>
+          <NavLink 
+            to="/about" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            About Us
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact Us</Link>
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Contact Us
+          </NavLink>
         </li>
         <li>
-          <Link to="/menu">Our Menu</Link>
+          <NavLink 
+            to="/menu" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Our Menu
+          </NavLink>
         </li>
         <li>
-          <Link to="/order">Order/Get Offer</Link>
+          <NavLink 
+            to="/order" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Order/Get Offer
+          </NavLink>
         </li>
         <li>
-          <Link to="/become-chef">Become a Kravinz Chef</Link>
+          <NavLink 
+            to="/become-chef" 
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Become a Kravinz Chef
+          </NavLink>
         </li>
       </ul>
     </nav>

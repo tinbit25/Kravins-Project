@@ -1,31 +1,62 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import AfricanFood from '../../assets/images/New Picture (3).png';
+// import AfricanFood2 from '../../assets/images/pexels-elevate-1267320 (1).jpg';
 
 const Section4 = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center bg-green-50 py-16 px-6 space-y-8">
-      {/* Section Title */}
-      <h2 className="text-4xl font-extrabold text-green-600 mb-6">
-        We Are Foreigners Helping Foreigners
-      </h2>
+    <section className=" p-8">
+      <motion.div
+        className="max-w-5xl mx-auto text-center"
+        initial={{ opacity: 0, y: 50 }} // Initial state
+        whileInView={{ opacity: 1, y: 0 }} // Animate to this state when in view
+        transition={{ duration: 1.5, ease: [0.5, 0.1, 0.1, 0.9] }} // More gradual easing effect
+      >
+        <h2 className="Tfont text-4xl font-bold mb-6 text-[#C9A581]">Meet Our Chefs</h2>
 
-      {/* Main Text */}
-      <p className="text-xl text-gray-800 font-medium leading-relaxed max-w-3xl">
-        As <span className="text-red-500 font-bold">three foreigners</span> living in Rwanda, we recognized a need for a model like Kravinz—bringing flavors from all corners of the world to this vibrant country. Our mission? To unite cultures through the <span className="font-bold text-green-600">universal language of food</span>.
-      </p>
+        <div className="flex flex-col md:flex-row items-center justify-center mb-8">
+          <motion.div
+            className="w-64 h-64 mb-4 md:mb-0 md:mr-6"
+            initial={{ scale: 0 }} // Initial scale for image
+            whileInView={{ scale: 1 }} // Animate to full scale when in view
+            transition={{ duration: 1.2, ease: [0.5, 0.1, 0.1, 0.9] }} // Slower scale effect
+          >
+            <img
+              src={AfricanFood} // Replace with the actual image path
+              alt="Chef Wisdom"
+              className="w-full h-full object-cover rounded-tr-full rounded-bl-full shadow-lg"
+            />
+          </motion.div>
 
-      <p className="text-lg text-gray-700 font-medium max-w-xl">
-        We're here to bridge the gap for foreigners by offering a <span className="text-red-500 italic">taste of home</span> while also opening doors to exciting culinary exploration. Every meal is a chance to build connections, foster understanding, and celebrate the rich tapestry of cultures.
-      </p>
-
-      <p className="text-lg text-gray-700 font-medium max-w-2xl">
-        With a heart full of passion and a purpose-driven mission, we aim to empower individuals to savour the richness of diversity—one dish, one kitchen, and one household at a time.
-      </p>
-
-      {/* Call to Action */}
-      <button className="bg-red-500 text-white py-3 px-8 rounded-full font-bold shadow-lg hover:bg-red-400 transition duration-300 ease-in-out">
-        Learn More
-      </button>
-    </div>
+          <motion.div
+            className="text-left text-white"
+            initial={{ opacity: 0 }} // Initial state
+            whileInView={{ opacity: 1 }} // Animate to this state when in view
+            transition={{ duration: 1.2, ease: [0.5, 0.1, 0.1, 0.9] }} // Smooth, slower opacity change
+          >
+            <h3 className="text-2xl font-semibold mb-2 text-[#C9A581]">Chef Wisdom</h3>
+            <p className="mb-4">
+              Chef Wisdom brings over 15 years of culinary experience, specializing in diverse cuisines and passionate about delivering memorable dining experiences. Their dedication to quality and creativity in the kitchen ensures that every meal is exceptional.
+            </p>
+            <button className="bg-[#C9A581] text-black px-4 py-2 rounded-lg hover:bg-[#A78D6D]">
+              Get a Package
+            </button>
+          </motion.div>
+          <motion.div
+            className="w-64 h-64 mb-4 md:mb-0 md:mr-6"
+            initial={{ scale: 0 }} // Initial scale for image
+            whileInView={{ scale: 1 }} // Animate to full scale when in view
+            transition={{ duration: 1.2, ease: [0.5, 0.1, 0.1, 0.9] }} // Slower scale effect
+          >
+            <img
+              src={AfricanFood} // Replace with the actual image path
+              alt="Chef Wisdom"
+              className="w-full h-full object-cover rounded-tr-full rounded-bl-full shadow-lg"
+            />
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
   );
 };
 

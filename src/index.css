@@ -1,58 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
 .navbar {
- 
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem; 
-    background-color: transparent; 
-  }
-  
-  .nav-links {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  
-  .nav-links li {
-    margin-left: 1.5rem; 
-    position: relative;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-    transition: color 0.5s ease;
-  }
-  
-  .nav-links a:hover {
-    color: orange
-  }
-  
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px; /* Adjust to place underline correctly */
-    left: 0;
-    width: 0;
-    height: 2px; /* Underline thickness */
-    background-color: orange; /* Underline color */
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .nav-links a:hover::after {
-    width: 100%; /* Underline expands on hover */
-  }
-  .active-link {
-    color: orange; /* Change this to your desired active color */
-    font-weight: bold; /* Make it bold for emphasis */
+  position: absolute;
+  right: 0;
+  top: 0; /* Ensures the navbar is positioned at the top */
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: transparent;
+  z-index: 10; /* Ensures it stays above other content */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  transition: color 0.5s ease;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.5s ease-in-out;
+  position: ;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+  .Tfont{
+    font-family: 'Cormorant Garamond', sans-serif;
   }
   .section-title {
     position: relative;
@@ -83,4 +91,15 @@
   .section-title::after {
     right: -110px; /* Position to the right of the text */
   }
-  
+  .simg{
+    border-top-left-radius: 250px;
+    border-bottom-right-radius: 250px;
+    opacity: 0.7;
+    
+  }
+  .simg2{
+    border-top-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+    opacity: 0.7;
+    
+  }

@@ -1,20 +1,32 @@
 import React from 'react';
-import Section1 from '../components/Home/Section1'; // Corrected import
-import Section2 from '../components/Home/Section2'; // Corrected import
-import Section3 from '../components/Home/Section3'; // Corrected import
-import Section4 from '../components/Home/Section4'; // Corrected import
-import Section5 from '../components/Home/Section5'; // Corrected import
-import HowItWorks from '../components/Home/HowItWorks'; // Corrected import
+import { Link } from 'react-scroll'; // Import Link from react-scroll
+import bgImage from '../assets/images/bg.jpg';
+
+import Section1 from '../components/Home/Section1';
+import Section2 from '../components/Home/Section2';
+import Section3 from '../components/Home/Section3';
+import Section4 from '../components/Home/Section4';
+import Section5 from '../components/Home/Section5';
+import HowItWorks from '../components/Home/HowItWorks';
 
 const Home = () => {
   return (
     <>
-      <Section1 />
-      <HowItWorks />
-      <Section2 /> {/* Use the corrected component name */}
-      <Section3 /> {/* Use the corrected component name */}
-      <Section4 /> {/* Use the corrected component name */}
-      <Section5 /> {/* Use the corrected component name */}
+      {/* Navigation Links for Smooth Scrolling */}
+      
+      <div
+        className="h-screen bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.4) 50%), url(${bgImage})`,
+        }}
+      >
+        <Section1 />
+      </div>
+      <HowItWorks id="how-it-works" />
+      <Section2 id="section2" />
+      <Section3 id="section3" />
+      <Section4 id="section4" />
+      <Section5 id="section5" />
     </>
   );
 };

@@ -1,27 +1,34 @@
 import React from 'react';
+import { FaUtensils } from 'react-icons/fa';
+import BackgroundImage from '../../assets/images/8917515a62f05ee4e2838f3b21a098a0.jpg'
 
 
 const Section1 = () => {
   return (
-    <div className="py-16 px-6">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-red-500 mb-8">
-          We are FOREIGNERS helping FOREIGNERS
-        </h2>
-        <p className="text-lg text-gray-700 mb-6">
-          As three foreigners living in Rwanda, we recognized a need for a service like 
-          <span className="font-bold text-green-600"> Kravinz</span> — a model that brings the world’s flavors to your table. 
-          Our mission is to unite cultures through the universal language of food, providing fellow foreigners with both a taste 
-          of home and a path to culinary exploration. Every meal we share is an opportunity to foster connections, bridge cultures, 
-          and cultivate understanding.
-        </p>
-        <p className="text-lg text-gray-700 mb-6">
-          With passion and purpose, we’re here to empower individuals to savor the richness of diversity, one dish at a time. 
-          Our goal is to enrich lives and households by transforming every kitchen into a space where culture meets creativity, 
-          and where every meal becomes a moment of shared joy.
-        </p>
+    <section
+      className="relative py-20 px-6 text-white"
+      style={{
+        backgroundImage: `url(${BackgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed', // Creates a parallax effect
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-60"></div> {/* Overlay for darkening the background */}
+      
+      <div className="relative max-w-5xl mx-auto text-center mb-16">
+        {/* Section Heading */}
+        <h2 className=" Tfont text-6xl font-extrabold  text-[#C9A581] drop-shadow-lg my-16 mt-36">About Us</h2>
+
+        {/* Icon for Visual Appeal */}
+        <div className="flex justify-center my-auto mb-14">
+          <FaUtensils className="text-6xl text-[#C9A581]" />
+        </div>
+
+        {/* Our Story */}
+        <div></div>
       </div>
-    </div>
+    </section>
   );
 };
 

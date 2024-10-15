@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import MealOrderPage from './pages/MealOrderPage';
-import BookChefForm from './pages/BookChefForm';
+import MakeRequest from './pages/MakeRequest';
 import BecomeAChef from './pages/BecomeAChef';
 import logoImage from './assets/images/Logo/white_orange_logo.png';
 import './index.css'; 
@@ -26,7 +26,7 @@ function App() {
           
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/menu" element={<BookChefForm />} />
+          <Route path="/menu" element={<MakeRequest />} />
           <Route path="/order" element={<MealOrderPage />} />
           <Route path="/become-chef" element={<BecomeAChef />} />
         </Routes>

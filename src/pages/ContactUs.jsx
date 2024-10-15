@@ -37,11 +37,31 @@ const ContactUs = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' }); // Reset form
+    
+    try {
+      const response = await fetch('http://localhost:5000/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), // Send formData as JSON
+      });
+      
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' }); // Reset form
+      } else {
+        const data = await response.json();
+        alert(`Error: ${data.error}`);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error sending your message. Please try again later.');
+    }
   };
+  
 
   return (
     <div className="py-16 pt-48 px-6 bg-[#0D0D0D] text-white">

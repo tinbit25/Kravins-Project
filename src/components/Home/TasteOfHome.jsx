@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-const Section1 = () => {
+const TasteOfHome = () => {
   const constantText = "Kraving delicious food but ";
   const phrases = [
     "don’t have the time or skills to cook it yourself?",
+    "don’t have the time or skills to cook it yourself?",
+    "Kraving the taste of home-cooked meals when you are away from your family?",
     "Kraving the taste of home-cooked meals when you are away from your family?",
     "Whether you're pressed for time or simply Krave the taste of home?",
+    "Whether you're pressed for time or simply Krave the taste of home?",
+    "Let us bring your culinary desires to you.",
     "Let us bring your culinary desires to you."
   ];
 
@@ -58,7 +62,7 @@ const Section1 = () => {
   }, [displayText, isDeleting, currentPhraseIndex, phrases, textLoaded]);
 
   return (
-    <div id="section1" className={` section1Container ${textLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-16'} flex flex-col items-center justify-center h-screen p-8 rounded-lg text-white text-center transition-all duration-800`}>
+    <div id="TasteOfHome" className={` section1Container ${textLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-16'} flex flex-col items-center justify-center h-screen p-8 rounded-lg text-white text-center transition-all duration-800`}>
       <h1 className="Tfont text-4xl font-bold mb-4">A TASTE OF HOME</h1>
       <p className="text-xl mb-6">{constantText}</p>
       <p className="text-xl mb-6">{displayText}</p>
@@ -74,4 +78,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default TasteOfHome;

@@ -33,6 +33,11 @@ const MealOrderPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Order placed successfully!');
+    // Reset the form after submission
+    setMealPreference('');
+    setNumberOfMeals(1);
+    setPersonalInfo({ name: '', email: '', phone: '' });
+    setAddress({ street: '', city: '', zip: '' });
   };
 
   return (
@@ -48,8 +53,8 @@ const MealOrderPage = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="max-w-3xl text text-white mx-auto p-8 shadow-lg rounded-lg mt-20">
-        <h1 className="text-3xl Tfont font-extrabold text-center text-[#C9A581] mb-8">
+      <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg mt-20 bg-opacity-90">
+        <h1 className="text-3xl font-extrabold text-center text-[#C9A581] mb-8">
           Don't Let Food Be the Hardest Part of Leaving Home
         </h1>
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-10">
@@ -57,9 +62,9 @@ const MealOrderPage = () => {
           <div className="mb-6 w-full md:w-1/2 relative">
             <h2 className="text-xl font-semibold mb-2">Choose Your Preference</h2>
             <div
-              className="w-full p-3 border rounded-md focus:outline-none bg-transparent cursor-pointer"
+              className="w-full p-3 border rounded-md cursor-pointer"
               onClick={() => setShowOptions(!showOptions)}
-              style={{ backgroundColor: 'transparent'}} // Semi-transparent background
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} // Semi-transparent background
             >
               {mealOptions.find(option => option.value === mealPreference)?.label || mealOptions[0].label}
             </div>
@@ -87,7 +92,7 @@ const MealOrderPage = () => {
               value={numberOfMeals}
               min="1"
               onChange={(e) => setNumberOfMeals(e.target.value)}
-              className="w-full p-3 border rounded-md focus:outline-none focus:bg-transparent bg-transparent focus:ring-2 focus:ring-[#C9A581]"
+              className="w-full p-3 border rounded-md focus:outline-none bg-transparent focus:ring-2 focus:ring-[#C9A581]"
             />
           </div>
         </div>

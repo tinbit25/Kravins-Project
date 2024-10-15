@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import FooterBg from '../../assets/images/Pngtree—healthy thai food recipes concept_15445097.webp';
 import Logo from '../../assets/images/Logo/white_orange_logo - Copy.png';
 import { motion } from 'framer-motion';
@@ -56,20 +56,25 @@ const Footer = () => {
         </div>
 
         {/* Contact Section */}
-        <div className='ml-40'>
-          <h3 className="text-2xl font-bold text-[#C9A581] mb-4 ">Contact Us</h3>
+        <div className="ml-40">
+          <h3 className="text-2xl font-bold text-[#C9A581] mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm">
-            <li>123 Street Name</li>
-            <li>City, Country</li>
-            <li>Email: info@example.com</li>
-            <li>Phone: +123 456 7890</li>
+            <li className="flex items-center">
+              <FaMapMarkerAlt className="mr-2 text-[#C9A581]" /> 123 Street Name, City, Country
+            </li>
+            <li className="flex items-center">
+              <FaEnvelope className="mr-2 text-[#C9A581]" /> Email: info@example.com
+            </li>
+            <li className="flex items-center">
+              <FaPhoneAlt className="mr-2 text-[#C9A581]" /> Phone: +123 456 7890
+            </li>
           </ul>
         </div>
       </motion.div>
 
       {/* Social Media Section */}
       <motion.div
-        className="mx-auto px-8 mt-24  z-10 flex justify-center"
+        className="mx-auto px-8 mt-24 z-10 flex justify-center"
         whileInView={{ opacity: 1, translateY: 0 }}
         initial={{ opacity: 0, translateY: 50 }}
         transition={{ duration: 2, ease: [0.5, 0.05, 0.1, 0.3] }}

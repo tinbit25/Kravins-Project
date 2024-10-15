@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Courgette&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +10,12 @@
 
 html{
   scroll-behavior: smooth;
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.Tfont{
+  font-family: "Vollkorn", serif;
 }
 .navbar {
   position: absolute;
@@ -66,9 +76,7 @@ html{
 }
 
 
-  .Tfont{
-    font-family: 'Cormorant Garamond', sans-serif;
-  }
+ 
   .section-title {
     position: relative;
     display: inline-block;
@@ -110,4 +118,27 @@ html{
     opacity: 0.7;
     
   }
-  
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bookform {
+  margin-top: -400px;
+  animation: fadeIn 0.5s ease-in-out forwards; /* Add this line */
+}
+
+.form {
+  position: relative;
+  left: 600px;
+  top: 0;
+  padding: 60px;
+  background-color: black;
+  border-radius: 20px;
+}

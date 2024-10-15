@@ -2,7 +2,7 @@ import React from 'react';
 import bgImage from '../assets/images/bg.jpg';
 import { motion } from 'framer-motion';
 
-import Section1 from '../components/Home/Section1';
+import TasteOfHome from '../components/Home/TasteOfHome';
 import Section2 from '../components/Home/Section2';
 import Section3 from '../components/Home/Section3';
 import Section4 from '../components/Home/Section4';
@@ -42,7 +42,7 @@ const Home = () => {
         
         {/* Text Section */}
         <div className="relative z-10"> {/* Ensure text is above the gradient */}
-          <Section1 />
+          <TasteOfHome />
         </div>
       </motion.div>
 

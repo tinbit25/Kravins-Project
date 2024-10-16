@@ -54,7 +54,7 @@ const MakeRequest = () => {
       >
 
         {/* Heading and Description */}
-        <div className="text-center my-48">
+        <div className="text-center md:my-48 mb-96 pb-48 md:pb-4">
           <h1 className="text-5xl font-extrabold text-[#C9A581] my-6">
             Make Your Reservation
           </h1>
@@ -65,14 +65,14 @@ const MakeRequest = () => {
      
         {/* Image */}
         <img 
-          className="w-full"
+          className="hidden md:block md:w-full "
           src={Image}
           alt="African Food"
         />
         
         {/* Form Section with Animation */}
         <motion.div
-          className="max-w-xl p-5 bookform form"
+          className="max-w-md md:max-w-xl p-5 bookform form "
           initial={{ x: '-100%', opacity: 0 }} // Start off the screen
           animate={{ x: 0, opacity: 1 }} // Slide in
           transition={{ duration: 0.5 }} // Animation duration

@@ -1,15 +1,17 @@
-import React from 'react';
+import {React,useEffect} from 'react';
 import bgImage from '../assets/images/bg.jpg';
 import { motion } from 'framer-motion';
 
 import TasteOfHome from '../components/Home/TasteOfHome';
-import Section2 from '../components/Home/Section2';
+import Packages from '../components/Home/Packages';
 import Section3 from '../components/Home/Section3';
-import Section4 from '../components/Home/Section4';
-import Section5 from '../components/Home/Section5';
+import MeetOurChefs from '../components/Home/MeetOurChefs';
+import MealHighlights from '../components/Home/MealHighlights';
 import HowItWorks from '../components/Home/HowItWorks';
+import BecomeChefHome from '../components/Home/BecomeChefHome';
 
 const Home = () => {
+
   return (
     <>
       <motion.div
@@ -47,10 +49,11 @@ const Home = () => {
       </motion.div>
 
       <HowItWorks id="how-it-works" />
-      <Section2 id="section2" />
+      <Packages id="Packages" />
       <Section3 id="section3" />
-      <Section4 id="section4" />
-      <Section5 id="section5" />
+      <MeetOurChefs id="MeetOurChefs" />
+      <BecomeChefHome/>
+      <MealHighlights id="MealHighlights" />
     </>
   );
 };

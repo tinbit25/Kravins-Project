@@ -10,7 +10,7 @@ const Section1 = () => {
     <section className="relative py-20 px-6 text-white mb-48">
       {/* Animated Background */}
       <motion.div
-        className="absolute inset-0 h-screen "
+        className="absolute inset-0"
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: 'cover',
@@ -32,9 +32,9 @@ const Section1 = () => {
       <div className="relative max-w-5xl mx-auto text-center mb-16">
         {/* Section Heading with Sliding Effect */}
         <motion.h2
-          className="Tfont text-6xl font-extrabold text-[#C9A581] drop-shadow-lg my-16 mt-36"
-          initial={{  opacity: 0,scale:1.5 }} // Start off-screen
-          animate={{ opacity: 1 ,scale:1}} // Slide in and fade in
+          className="Tfont text-6xl font-extrabold text-[#C9A581] drop-shadow-lg my-36 mt-36"
+          initial={{ opacity: 0, scale: 1.5 }} // Start off-screen
+          animate={{ opacity: 1, scale: 1 }} // Slide in and fade in
           transition={{
             duration: 2,
             delay: delay,
@@ -43,14 +43,9 @@ const Section1 = () => {
           About Us
 
           <div className="flex justify-center my-auto mb-14">
-          <FaUtensils className="text-6xl text-[#C9A581]" />
-        </div>
+            <FaUtensils className="text-6xl text-[#C9A581]" />
+          </div>
         </motion.h2>
-
-        {/* Icon for Visual Appeal */}
-       
-
-        
       </div>
     </section>
   );

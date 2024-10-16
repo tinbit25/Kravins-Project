@@ -1,21 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Cbg from '../components/contact/Cbg';
 import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
-
-// Import Leaflet images
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
-
-// Set default marker icon
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-});
+import ScrollToTop from './ScrollToTop';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +25,7 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('http://localhost:5000/contact', {
         method: 'POST',
@@ -48,7 +34,7 @@ const ContactUs = () => {
         },
         body: JSON.stringify(formData), // Send formData as JSON
       });
-      
+
       if (response.ok) {
         alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' }); // Reset form
@@ -61,11 +47,12 @@ const ContactUs = () => {
       alert('There was an error sending your message. Please try again later.');
     }
   };
-  
 
   return (
-    <div className="py-16 pt-48 px-6 bg-[#0D0D0D] text-white">
-      <div className={`transition-transform duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+    <div className=" px-6 bg-[#0D0D0D] text-white">
+        <ScrollToTop />
+      <Cbg />
+      <div className={`transition-transform duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 '}`}>
         <div className="max-w-5xl mx-auto text-center mb-12">
           <h2 className="text-4xl Tfont font-bold text-[#C9A581] mb-4">Contact Us</h2>
           <p className="text-lg">
@@ -159,21 +146,6 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Dark Map Section */}
-        <div className="mt-12 w-full">
-          <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '400px', width: '100%' }}>
-            <TileLayer
-              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-            />
-            <Marker position={[51.505, -0.09]}>
-              <Popup>
-                Our Location. <br /> Visit us!
-              </Popup>
-            </Marker>
-          </MapContainer>
         </div>
 
         {/* Follow Us Section */}

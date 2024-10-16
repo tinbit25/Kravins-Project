@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const TasteOfHome = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
+
   const constantText = "Kraving delicious food but ";
   const phrases = [
     "don’t have the time or skills to cook it yourself?",
-    "don’t have the time or skills to cook it yourself?",
-    "Kraving the taste of home-cooked meals when you are away from your family?",
     "Kraving the taste of home-cooked meals when you are away from your family?",
     "Whether you're pressed for time or simply Krave the taste of home?",
-    "Whether you're pressed for time or simply Krave the taste of home?",
-    "Let us bring your culinary desires to you.",
     "Let us bring your culinary desires to you."
   ];
 
@@ -49,9 +50,7 @@ const TasteOfHome = () => {
         setDisplayText(prev => {
           const newText = currentPhrase.slice(0, prev.length + 1);
           if (newText.length === currentPhrase.length) {
-            setTimeout(() => {
-              setIsDeleting(true);
-            }, pauseAfterTyping);
+            setTimeout(() => setIsDeleting(true), pauseAfterTyping);
           }
           return newText;
         });
@@ -62,17 +61,21 @@ const TasteOfHome = () => {
   }, [displayText, isDeleting, currentPhraseIndex, phrases, textLoaded]);
 
   return (
-    <div id="TasteOfHome" className={` section1Container ${textLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-16'} flex flex-col items-center justify-center h-screen p-8 rounded-lg text-white text-center transition-all duration-800`}>
-      <h1 className="Tfont text-4xl font-bold mb-4">A TASTE OF HOME</h1>
-      <p className="text-xl mb-6">{constantText}</p>
-      <p className="text-xl mb-6">{displayText}</p>
-      <div className="flex justify-center space-x-8">
-        <button className="bg-transparent border-2 border-red-400 text-red-400 py-2 px-4 transition duration-500 hover:bg-red-400 hover:text-white hover:shadow-lg hover:scale-110">
-          Learn More
-        </button>
-        <button className="bg-transparent border-2 border-white text-white py-2 px-4 transition duration-500 hover:bg-white hover:text-black hover:shadow-lg hover:scale-110">
-          See How It Works
-        </button>
+    <div id="TasteOfHome" className={`section1Container ${textLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-16'} flex flex-col items-center justify-center h-screen p-8 rounded-lg text-white text-center transition-all duration-800`}>
+      <h1 className="text-4xl sm:text-5xl font-bold mb-4">A TASTE OF HOME</h1>
+      <p className="text-xl sm:text-2xl mb-6">{constantText}</p>
+      <p className="text-xl sm:text-2xl mb-6">{displayText}</p>
+      <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+        <Link to='/about'>
+          <button className="bg-transparent border-2 border-red-400 text-red-400 py-2 px-4 transition duration-500 hover:bg-red-400 hover:text-white hover:shadow-lg hover:scale-110">
+            Learn More
+          </button>
+        </Link>
+        <Link to="/Ourstory">
+          <button className="bg-transparent border-2 border-white text-white py-2 px-4 transition duration-500 hover:bg-white hover:text-black hover:shadow-lg hover:scale-110">
+            See How It Works
+          </button>
+        </Link>
       </div>
     </div>
   );

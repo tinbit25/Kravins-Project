@@ -13,26 +13,28 @@ html{
   font-family: "Courgette", cursive;
   font-weight: 400;
   font-style: normal;
+  color: white;
 }
 .Tfont{
   font-family: "Vollkorn", serif;
 }
+
 .navbar {
   position: absolute;
-  right: 0;
-  top: 0; /* Ensures the navbar is positioned at the top */
+  right: 0; /* Align navbar to the right */
+  top: 0; 
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Align items to the end */
   padding: 1rem;
-  background-color: transparent; /* Make this solid if you want a background on scroll */
-  z-index: 10; /* Ensures it stays above other content */
+  background-color: transparent;
+  z-index: 10;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   list-style: none;
-  padding: 0; /* Remove padding for a cleaner look */
+  padding: 0;
   margin: 0;
 }
 
@@ -43,15 +45,15 @@ html{
 
 .nav-links a {
   text-decoration: none;
-  color: white; /* Default link color */
+  color: white;
   padding: 10px;
   font-size: 18px;
-  transition: color 0.5s ease, transform 0.3s ease; /* Added transform for scale effect */
+  transition: color 0.5s ease, transform 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: orange; /* Change color on hover */
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  color: orange;
+  transform: scale(1.1);
 }
 
 .nav-links a::after {
@@ -61,20 +63,68 @@ html{
   left: 0;
   width: 0;
   height: 2px;
-  background-color: orange; /* Underline color */
-  transition: width 0.5s ease-in-out; /* Smooth transition for the underline effect */
+  background-color: orange;
+  transition: width 0.5s ease-in-out;
 }
 
 .nav-links a:hover::after {
-  width: 100%; /* Expand underline to full width on hover */
-}
-.nav-links a.active {
-  color: orange;
-  
-   
-  font-weight: bold; /* Optional: make active link bold */
+  width: 100%;
 }
 
+.nav-links a.active {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  /* Menu hidden off the screen initially */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Use fixed to keep it in the viewport */
+    top: 0; /* Align to the top of the viewport */
+    left: -100%; /* Initially hidden off the left side */
+    opacity: 0; /* Start hidden */
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh; /* Full height of the viewport */
+    width: 400px; /* Set a fixed width for the menu */
+    justify-content: flex-start; /* Align items to the start */
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out; /* Smooth slide-in transition */
+    transform: translateX(0); /* Start from the left */
+  }
+  
+  .nav-links.active {
+    left: 0; /* Bring to view */
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move into view */
+  }
+  
+  /* Additional transition for exit state */
+  .nav-links:not(.active) {
+    transform: translateX(-100%); /* Slide out to the left */
+    opacity: 0; /* Fade out */
+  }
+
+
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  /* Show the hamburger icon */
+  .menu-icon {
+    display: block;
+    margin-left: 1rem; /* Adjust margin if needed */
+  }
+}
 
  
   .section-title {
@@ -107,8 +157,8 @@ html{
     right: -110px; /* Position to the right of the text */
   }
   .simg{
-    border-top-left-radius: 250px;
-    border-bottom-right-radius: 250px;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
     opacity: 0.7;
     
   }
@@ -141,4 +191,10 @@ html{
   padding: 60px;
   background-color: black;
   border-radius: 20px;
+}
+.meetchef{
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: none;
+  border-bottom-left-radius:30%;
+  border-top-right-radius: 30%;
 }

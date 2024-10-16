@@ -55,7 +55,6 @@ const OurCommitment = () => {
             className={`relative p-8 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 text-white group
               ${cardInView ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'}
               transition-all duration-700 ease-in-out`}
-          
           >
             {/* Icon and Title */}
             <div className="text-5xl text-[#C9A581] mb-4 group-hover:scale-110 transition-transform duration-300">

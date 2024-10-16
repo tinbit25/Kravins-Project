@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BackgroundImage from '../assets/images/pexels-elevate-12673.webp';
 import Image from '../assets/images/Bookpic.png';
+import ScrollToTop from './ScrollToTop';
+
 
 const MakeRequest = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
   // State for form data
   const [formData, setFormData] = useState({
     name: '',
@@ -37,6 +42,7 @@ const MakeRequest = () => {
 
   return (
     <>
+     <ScrollToTop /> 
       <div
         style={{
           backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 50%),url(${BackgroundImage})`,

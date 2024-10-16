@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import BackgroundImage from '../assets/images/pexels-elevate-12673.webp';
+import ScrollToTop from './ScrollToTop';
 
 const BecomeAChef = () => {
   const [formData, setFormData] = useState({
@@ -21,25 +22,34 @@ const BecomeAChef = () => {
   const handleMultiSelectChange = (e) => {
     const { value } = e.target;
     setFormData((prevData) => {
-      if (prevData.reason.includes(value)) {
-        return { ...prevData, reason: prevData.reason.filter((item) => item !== value) };
-      } else {
-        return { ...prevData, reason: [...prevData.reason, value] };
-      }
+      const updatedReasons = prevData.reason.includes(value)
+        ? prevData.reason.filter((item) => item !== value)
+        : [...prevData.reason, value];
+      return { ...prevData, reason: updatedReasons };
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here (e.g., API call)
-    alert('Form submitted successfully!'); 
-    console.log(formData); // Check the collected form data in console
+    // Form submission logic (e.g., API call)
+    alert('Form submitted successfully!');
+    console.log(formData); // Log the collected form data for verification
+    // Reset the form after submission
+    setFormData({
+      name: '',
+      phone: '',
+      location: '',
+      availability: '',
+      cookingLevel: '',
+      reason: [],
+      additionalComments: '',
+    });
   };
 
   return (
     <motion.div
       style={{
-        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%),url(${BackgroundImage})`,
+        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(${BackgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -49,8 +59,9 @@ const BecomeAChef = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg">
-        <h1 className="Tfont text-3xl font-bold text-center text-[#C9A581] mb-8">
+      <ScrollToTop />
+      <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg bg-opacity-90">
+        <h1 className="text-3xl font-bold text-center text-[#C9A581] mb-8">
           Become a Kravinz Chef
         </h1>
         <form onSubmit={handleSubmit}>

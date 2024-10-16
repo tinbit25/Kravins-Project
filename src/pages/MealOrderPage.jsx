@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import BackgroundImage from '../assets/images/pexels-elevate-12673.webp';
+import BackgroundImage from '../assets/images/Pngtree—fresh fruits and vegetables food_27410.jpg';
+import ScrollToTop from './ScrollToTop';
 
 const MealOrderPage = () => {
   const [mealPreference, setMealPreference] = useState('');
@@ -43,7 +44,7 @@ const MealOrderPage = () => {
   return (
     <motion.div
       style={{
-        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%),url(${BackgroundImage})`,
+        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(${BackgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -53,6 +54,7 @@ const MealOrderPage = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
+      <ScrollToTop />
       <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg mt-20 bg-opacity-90">
         <h1 className="text-3xl font-extrabold text-center text-[#C9A581] mb-8">
           Don't Let Food Be the Hardest Part of Leaving Home
@@ -96,7 +98,7 @@ const MealOrderPage = () => {
             />
           </div>
         </div>
-        
+
         {/* Personal Info Section */}
         <div className="mb-6">
           <h2 className="text-xl font-semibold mb-2">Personal Information</h2>

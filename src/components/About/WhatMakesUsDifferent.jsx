@@ -56,72 +56,71 @@ const WhatMakesUsDifferent = () => {
     );
   };
 
-  // Automatically change slide every 5 seconds (5000 ms)
+  // Automatically change slide every 6 seconds (6000 ms)
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 4000);
+    }, 6000);
 
     // Clear interval when component unmounts
     return () => clearInterval(interval);
   }, [currentIndex]); // Runs whenever currentIndex changes
 
   return (
-    <section className="what-makes-us-different pt-32 pb-10 px-60 relative">
+    <section className="what-makes-us-different pt-32 pb-10 px-4 md:px-16 lg:px-60 relative">
       {/* Section Header */}
       <div className="py-28 mb-10 border border-l-transparent border-r-transparent border-[#C9A581]">
-      <h2 className="Tfont text-4xl font-bold text-center text-[#C9A581] mb-12">
-        What Makes Us Different?
-      </h2>
+        <h2 className="Tfont text-4xl font-bold text-center text-[#C9A581] mb-12">
+          What Makes Us Different?
+        </h2>
 
-      {/* Carousel Container */}
-      <div className="overflow-hidden relative">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {/* Mapping through the content array to display each section */}
-          {content.map((item, index) => (
-            <div
-              key={index}
-              className={`min-w-full p-8 shadow-md rounded-lg transition-transform duration-500 ${
-                currentIndex === index ? "scale-105" : "scale-95"
-              }`}
-            >
-              <h3 className="text-xl font-semibold text-[#C9A581] text-center mb-4">
-                {item.title}
-              </h3>
-              <p className="text-white leading-relaxed mb-3 text-center">
-                {item.text1}
-              </p>
-              <p className="text-white leading-relaxed text-center">
-                {item.text2}
-              </p>
-            </div>
-          ))}
+        {/* Carousel Container */}
+        <div className="overflow-hidden relative">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {/* Mapping through the content array to display each section */}
+            {content.map((item, index) => (
+              <div
+                key={index}
+                className={`min-w-full p-8 shadow-md rounded-lg transition-transform duration-500 ${
+                  currentIndex === index ? "scale-105" : "scale-95"
+                }`}
+              >
+                <h3 className="text-xl font-semibold text-[#C9A581] text-center mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-white leading-relaxed mb-3 text-center">
+                  {item.text1}
+                </p>
+                <p className="text-white leading-relaxed text-center">
+                  {item.text2}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Previous and Next buttons */}
+        <div className="absolute text-5xl top-1/2 left-0 transform -translate-y-1/2 pl-5">
+          <button
+            onClick={handlePrev}
+            className="hover:scale-150 hover:duration-150 text-gray-200 py-2 px-2 rounded-lg transform"
+          >
+            <span className="text-6xl font-light">&#60;</span> {/* Left arrow icon */}
+          </button>
+        </div>
+
+        <div className="absolute top-1/2 right-0 transform -translate-y-1/2 pr-5">
+          <button
+            onClick={handleNext}
+            className="hover:scale-150 text-gray-200 py-2 px-2 rounded-lg transform"
+          >
+            <span className="text-6xl font-light">&#62;</span>
+          </button>
         </div>
       </div>
-
-      {/* Previous and Next buttons */}
-      <div className="absolute text-5xl top-1/2 left-0 transform -translate-y-1/2 pl-5">
-        <button
-          onClick={handlePrev}
-          className=" hover:scale-150 hover:duration-150 text-gray-200 py-2 px-2 rounded-lg transform"
-        >
-          <span className="text-6xl font-light">&#60;</span> {/* Left arrow icon */}
-        </button>
-      </div>
-
-      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 pr-5">
-  <button
-    onClick={handleNext}
-    className="hover:scale-150 text-gray-200 py-2 px-2 rounded-lg transform"
-  >
-    <span className="text-6xl font-light">&#62;</span>
-  </button>
-</div>
-
-</div>
     </section>
   );
 };

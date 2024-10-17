@@ -3,37 +3,69 @@ import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 
 const Form = () => {
-  // State for form data
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    origin: '',
-    budget: '',
-    dietaryNeeds: 'No',
-    service: [],
-  });
+  // State for form data, loading, and error
+const [formData, setFormData] = useState({
+  name: '',
+  phone: '',
+  origin: '',
+  budget: '',
+  dietaryNeeds: 'No',
+  service: [],
+});
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState('');
 
-  // Handle input changes for form fields
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === 'service') {
-      setFormData((prev) => {
-        const newService = prev.service.includes(value)
-          ? prev.service.filter((item) => item !== value)
-          : [...prev.service, value];
-        return { ...prev, service: newService };
-      });
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
+// Handle input changes for form fields
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  if (name === 'service') {
+    setFormData((prev) => {
+      const newService = prev.service.includes(value)
+        ? prev.service.filter((item) => item !== value)
+        : [...prev.service, value];
+      return { ...prev, service: newService };
+    });
+  } else {
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  }
+};
+
+// Handle form submission
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  setError('');
+
+  try {
+    const response = await fetch('http://localhost:5000/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(errorText);
     }
-  };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
+    alert('Form submitted successfully!');
+    setFormData({
+      name: '',
+      phone: '',
+      origin: '',
+      budget: '',
+      dietaryNeeds: 'No',
+      service: [],
+    });
+  } catch (error) {
+    setError(`An error occurred: ${error.message}`);
+    console.error(error);
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <div>
       <img

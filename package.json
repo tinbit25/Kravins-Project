@@ -10,9 +10,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "framer-motion": "^11.11.8",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",

@@ -4,7 +4,7 @@ import BackgroundImage from '../assets/images/pexels-elevate-12673.webp';
 import ScrollToTop from './ScrollToTop';
 
 const BecomeAChef = () => {
-  const [formData, setFormData] = useState({
+  const [formData2, setFormData] = useState({
     name: '',
     phone: '',
     location: '',
@@ -13,10 +13,10 @@ const BecomeAChef = () => {
     reason: [],
     additionalComments: '',
   });
-
-  const handleChange = (e) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData2, [name]: value });
   };
 
   const handleMultiSelectChange = (e) => {
@@ -29,23 +29,43 @@ const BecomeAChef = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic (e.g., API call)
-    alert('Form submitted successfully!');
-    console.log(formData); // Log the collected form data for verification
-    // Reset the form after submission
-    setFormData({
-      name: '',
-      phone: '',
-      location: '',
-      availability: '',
-      cookingLevel: '',
-      reason: [],
-      additionalComments: '',
-    });
+    setLoading(true);
+    setError('');
+  
+    try {
+      const response = await fetch('http://localhost:5000/submitchefform', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData2),
+      });
+  
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText);
+      }
+  
+      alert('Form submitted successfully!');
+      setFormData({
+        name: '',
+        phone: '',
+        location: '',
+        availability: '',
+        cookingLevel: '',
+        reason: [],
+        additionalComments: '',
+      });
+    } catch (error) {
+      setError(`An error occurred: ${error.message}`);
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
-
+ 
   return (
     <motion.div
       style={{
@@ -71,7 +91,7 @@ const BecomeAChef = () => {
             <input
               type="text"
               name="name"
-              value={formData.name}
+              value={formData2.name}
               onChange={handleChange}
               required
               className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -85,7 +105,7 @@ const BecomeAChef = () => {
             <input
               type="tel"
               name="phone"
-              value={formData.phone}
+              value={formData2.phone}
               onChange={handleChange}
               required
               className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -99,7 +119,7 @@ const BecomeAChef = () => {
             <input
               type="text"
               name="location"
-              value={formData.location}
+              value={formData2.location}
               onChange={handleChange}
               required
               className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -112,7 +132,7 @@ const BecomeAChef = () => {
             <label className="block text-xl font-bold mb-2">What is your availability?</label>
             <select
               name="availability"
-              value={formData.availability}
+              value={formData2.availability}
               onChange={handleChange}
               required
               className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -129,7 +149,7 @@ const BecomeAChef = () => {
             <label className="block text-xl font-bold mb-2">What is your level of cooking?</label>
             <select
               name="cookingLevel"
-              value={formData.cookingLevel}
+              value={formData2.cookingLevel}
               onChange={handleChange}
               required
               className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -150,7 +170,7 @@ const BecomeAChef = () => {
                   <input
                     type="checkbox"
                     value={option}
-                    checked={formData.reason.includes(option)}
+                    checked={formData2.reason.includes(option)}
                     onChange={handleMultiSelectChange}
                     className="mr-2"
                   />
@@ -165,7 +185,7 @@ const BecomeAChef = () => {
             <label className="block text-xl font-bold mb-2">Additional Comments</label>
             <textarea
               name="additionalComments"
-              value={formData.additionalComments}
+              value={formData2.additionalComments}
               onChange={handleChange}
               className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
               placeholder="Any additional information..."

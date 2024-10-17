@@ -31,14 +31,37 @@ const MealOrderPage = () => {
     setShowOptions(false);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Order placed successfully!');
-    // Reset the form after submission
-    setMealPreference('');
-    setNumberOfMeals(1);
-    setPersonalInfo({ name: '', email: '', phone: '' });
-    setAddress({ street: '', city: '', zip: '' });
+  const handleSubmit = async () => {
+    const orderData = {
+      mealPreference,
+      numberOfMeals,
+      personalInfo,
+      address,
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/submitMealOrder', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(orderData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit the order');
+      }
+
+      alert('Order placed successfully!');
+      // Reset the form after submission
+      setMealPreference('');
+      setNumberOfMeals(1);
+      setPersonalInfo({ name: '', email: '', phone: '' });
+      setAddress({ street: '', city: '', zip: '' });
+    } catch (error) {
+      console.error('Error:', error);
+      alert('There was an error placing your order.');
+    }
   };
 
   return (

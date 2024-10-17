@@ -20,29 +20,6 @@ html{
 }
 
 
-
-
-@media (max-width: 768px) {
-  
-
-  .bookform {
-    
-    position: relative;
-    left: 100px;
-    top: 300px;
-    bottom: auto;
-    padding: 60px;
-    background-color: black;
-    border-radius: 20px;
-  }
-  
-  .form {
-    
-    margin-left: -120%;
-   
-  }
-}
-
  
   .section-title {
     position: relative;
@@ -97,18 +74,22 @@ html{
 }
 
 .bookform {
-  margin-top: -400px;
-  animation: fadeIn 0.5s ease-in-out forwards; 
-}
-
-.form {
-  position: relative;
-  left: 600px;
-  top: 0;
-  padding: 60px;
+  margin-top: -400px; /* Keep this for larger screens */
+  padding: 60px; /* Keep the original padding */
   background-color: black;
   border-radius: 20px;
 }
+
+@media (max-width: 768px) { /* Adjust for smaller screens */
+  .bookform {
+    margin-top: 0; /* Reset margin for smaller screens */
+    padding: 30px; /* Reduce padding for smaller screens */
+    left: 0; /* Reset left position */
+  }
+}
+
+
+
 .meetchef{
   border-top-left-radius: 30%;
   border-bottom-right-radius: none;

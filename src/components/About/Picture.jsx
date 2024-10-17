@@ -17,7 +17,7 @@ const Picture = () => {
   return (
     <div className="relative">
       <div
-        className="h-screen bg-cover bg-center"
+        className="h-screen bg-cover bg-center hidden md:block"
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: 'cover',

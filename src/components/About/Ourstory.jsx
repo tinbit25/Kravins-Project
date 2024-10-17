@@ -2,13 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AfricanFood from '../../assets/images/Jollof_Rice_with_Stew.jpg';
 
-/**
- * OurStory Component
- * 
- * This component presents the story of the company with an image and descriptive text. 
- * It uses Framer Motion for smooth animations and Tailwind CSS for styling and responsiveness.
- * The content and layout adapt based on screen size, displaying images and text with smooth transitions.
- */
+
+  // OurStory Component
+ 
+ 
 const OurStory = () => {
   return (
     <div className='px-4 md:px-20 text-white'>

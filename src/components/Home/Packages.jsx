@@ -40,7 +40,7 @@ const Packages = () => {
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 1, ease: "easeInOut" }} 
       >
-        <h2 className="text-5xl text-[#C9A581] mb-10">Our Packages</h2>
+        <h2 className="Tfont text-5xl text-[#C9A581] mb-10">Our Packages</h2>
         <p className="text-lg mb-6 text-white">Dining Made Easy</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {packageData.map(pkg => (

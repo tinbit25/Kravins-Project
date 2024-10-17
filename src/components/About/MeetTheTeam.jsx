@@ -30,7 +30,7 @@ const teamMembers = [
 const MeetTheTeam = () => {
   return (
     <section className="py-16 px-5 lg:px-28 text-white">
-      <h2 className="text-5xl font-bold text-center text-[#C9A581] mb-12">
+      <h2 className="Tfont text-5xl font-bold text-center text-[#C9A581] mb-12">
         Meet Our Team
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

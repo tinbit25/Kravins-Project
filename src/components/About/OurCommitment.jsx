@@ -1,6 +1,6 @@
 import React from 'react';
-import { useInView } from 'react-intersection-observer'; // For scroll-based animation
-import { FaLeaf, FaHandsHelping, FaLightbulb, FaStar } from 'react-icons/fa'; // FontAwesome icons
+import { useInView } from 'react-intersection-observer'; 
+import { FaLeaf, FaHandsHelping, FaLightbulb, FaStar } from 'react-icons/fa'; 
 
 const commitments = [
   {
@@ -30,15 +30,15 @@ const commitments = [
 ];
 
 const OurCommitment = () => {
-  // Single hook for unified transition
+
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.2, // Trigger when 20% of the section is visible
+    threshold: 0.2, 
   });
 
   return (
     <section className="py-10 sm:py-16 px-5 lg:px-28 relative">
-      {/* Parent div for unified transition */}
+      
       <div
         ref={ref}
         className={`transition-all duration-1000 ease-in-out ${

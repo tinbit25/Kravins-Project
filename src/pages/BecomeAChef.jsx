@@ -81,7 +81,7 @@ const BecomeAChef = () => {
     >
       <ScrollToTop />
       <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg bg-opacity-90">
-        <h1 className="text-3xl font-bold text-center text-[#C9A581] mb-8">
+        <h1 className=" Tfont text-3xl font-bold text-center text-[#C9A581] mb-8">
           Become a Kravinz Chef
         </h1>
         <form onSubmit={handleSubmit}>

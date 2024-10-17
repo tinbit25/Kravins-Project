@@ -84,7 +84,7 @@ const MealHighlights = () => {
   return (
     <section className="bg-[#0D0D0D] py-16 mb-10">
       <div className="p-8">
-        <h2 className="text-5xl text-[#C9A581] mb-10 text-center">
+        <h2 className="Tfont text-5xl text-[#C9A581] mb-10 text-center">
           Meal Highlights
         </h2>
 

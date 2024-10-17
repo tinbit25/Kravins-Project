@@ -8,7 +8,7 @@ const AboutUs1 = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Increased stagger time for slower transitions
+        staggerChildren: 0.2, 
       },
     },
   };
@@ -19,7 +19,7 @@ const AboutUs1 = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5, // Increased duration for slower movement
+        duration: 0.5,
       },
     },
   };
@@ -35,7 +35,7 @@ const AboutUs1 = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ once: false }} // Animates only once when in view
+          viewport={{ once: false }} 
         />
 
         {/* Text Section */}
@@ -44,7 +44,7 @@ const AboutUs1 = () => {
           initial="hidden"
           whileInView="visible"
           variants={containerVariants}
-          viewport={{ once: false }} // Animates only once when in view
+          viewport={{ once: false }} 
         >
           {/* Header */}
           <motion.h2

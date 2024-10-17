@@ -79,7 +79,7 @@ const MealOrderPage = () => {
     >
       <ScrollToTop />
       <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg mt-20 bg-opacity-90">
-        <h1 className="text-3xl font-extrabold text-center text-[#C9A581] mb-8">
+        <h1 className=" Tfont text-3xl font-extrabold text-center text-[#C9A581] mb-8">
           Don't Let Food Be the Hardest Part of Leaving Home
         </h1>
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-10">

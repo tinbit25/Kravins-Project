@@ -4,7 +4,7 @@ import { FaUtensils } from 'react-icons/fa';
 import BackgroundImage from '../../assets/images/8917515a62f05ee4e2838f3b21a098a0.jpg';
 
 const Section1 = () => {
-  const delay = 0; // Adjust delay as needed
+  const delay = 0; 
 
   return (
     <section className="relative py-20 px-6 text-white mb-48">
@@ -18,7 +18,7 @@ const Section1 = () => {
           backgroundAttachment: 'fixed',
         }}
         initial={{ scale: 1 }}
-        animate={{ scale: [1, 1.05, 1] }} // Scale effect
+        animate={{ scale: [1, 1.05, 1] }} 
         transition={{
           duration: 10,
           repeat: Infinity,
@@ -33,8 +33,8 @@ const Section1 = () => {
         {/* Section Heading with Sliding Effect */}
         <motion.h2
           className="Tfont text-6xl font-extrabold text-[#C9A581] drop-shadow-lg my-36 mt-36"
-          initial={{ opacity: 0, scale: 1.5 }} // Start off-screen
-          animate={{ opacity: 1, scale: 1 }} // Slide in and fade in
+          initial={{ opacity: 0, scale: 1.5 }} 
+          animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 2,
             delay: delay,

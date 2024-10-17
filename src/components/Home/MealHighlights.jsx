@@ -38,8 +38,28 @@ const meals = [
 
 const MealHighlights = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3); // Default for large screens
   const totalMeals = meals.length;
-  const slidesToShow = 3; // Number of slides to show at once
+
+  // Set the number of slides based on the screen width
+  const updateSlidesToShow = () => {
+    if (window.innerWidth < 640) {
+      setSlidesToShow(1); // 1 slide for small screens
+    } else if (window.innerWidth < 1024) {
+      setSlidesToShow(2); // 2 slides for medium screens
+    } else {
+      setSlidesToShow(3); // 3 slides for large screens
+    }
+  };
+
+  useEffect(() => {
+    updateSlidesToShow(); // Set initial value based on window width
+    window.addEventListener('resize', updateSlidesToShow); // Adjust when resized
+
+    return () => {
+      window.removeEventListener('resize', updateSlidesToShow); // Clean up on unmount
+    };
+  }, []);
 
   // Automatically slide every 5 seconds
   useEffect(() => {
@@ -78,7 +98,7 @@ const MealHighlights = () => {
             {meals.map((meal, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 px-2" // Responsive widths
+                className={`flex-shrink-0 w-full sm:w-1/2 md:w-1/3 px-2`} // Adjust widths dynamically
               >
                 <div className="bg-gray-800 rounded-lg overflow-hidden">
                   <img

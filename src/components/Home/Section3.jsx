@@ -31,7 +31,7 @@ return (
 <section ref={sectionRef} className="mb-11">
 <div className={`${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-24'} transition-all duration-1000`}>
 <div className="flex flex-col space-y-10 p-8 ">
-<h2 className="Tfont ml-12 mt-10 text-3xl md:text-5xl text-[#C9A581] leading-[0.6] ">
+<h2 className="Tfont md:ml-12 mt-10 text-3xl md:text-5xl text-[#C9A581] leading-[0.6] ">
 TIRED OF DELIVERY
 </h2>
 <h2 className="Tfont text-3xl md:text-5xl text-[#C9A581] mb-6 text-center leading-[0.5]">

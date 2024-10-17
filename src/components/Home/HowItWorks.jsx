@@ -40,7 +40,7 @@ const HowItWorks = () => {
           {steps.map(step => (
             <motion.div
               key={step.id}
-              className="p-2 text-white mx-20 md:m-0 bg-[#333] rounded-t-full rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-[#444] duration-300"
+              className="p-2 text-white mx-20 sm:mx-12 md:m-0 bg-[#333] rounded-t-full rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-[#444] duration-300"
               style={{ backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%),url(${step.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               initial={{ opacity: 0, y: -100, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}

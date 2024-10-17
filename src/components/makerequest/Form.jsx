@@ -44,7 +44,7 @@ const Form = () => {
 
       {/* Form Section with Animation */}
       <motion.div
-        className="max-w-md md:max-w-xl p-5 bookform mx-auto bg-black rounded-lg relative z-10"
+        className="max-w-md md:max-w-xl p-5 bookform mx-auto bg-black rounded-lg relative"
         initial={{ x: '-100%', opacity: 0 }} // Start off the screen
         animate={{ x: 0, opacity: 1 }} // Slide in
         transition={{ duration: 0.5 }} // Animation duration

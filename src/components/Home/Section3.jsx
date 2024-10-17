@@ -31,10 +31,10 @@ return (
 <section ref={sectionRef} className="mb-11">
 <div className={`${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-24'} transition-all duration-1000`}>
 <div className="flex flex-col space-y-10 p-8 ">
-<h2 className="Tfont ml-12 mt-10 text-5xl text-[#C9A581] leading-[0.6]">
+<h2 className="Tfont ml-12 mt-10 text-3xl md:text-5xl text-[#C9A581] leading-[0.6] ">
 TIRED OF DELIVERY
 </h2>
-<h2 className="Tfont text-5xl text-[#C9A581] mb-6 text-center leading-[0.5]">
+<h2 className="Tfont text-3xl md:text-5xl text-[#C9A581] mb-6 text-center leading-[0.5]">
 DISAPPOINTMENTS?
 </h2>
 
@@ -47,7 +47,14 @@ DISAPPOINTMENTS?
     <div className="flex flex-col md:flex-row space-x-7">
     
     
-
+    <div className="md:hidden relative md:w-1/2 w-auto m-13 mt-20">
+        <img 
+          className="w-full h-auto"
+          src={AfricanFood}
+          alt="African Food"
+        />
+        <div className=" rounded-full absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-100"></div>
+      </div>
     {/* Sub-text */}
     <div className="flex flex-col leading-10 text-center md:text-start">
        <p className="text-3xl font-semibold text-[#C9A581]  md:mt-40  leading-10">
@@ -69,7 +76,7 @@ DISAPPOINTMENTS?
       Contact Us Now
     </button></Link>
     </div>
-     <div className="relative md:w-1/2 w-auto m-13 mt-20">
+     <div className=" hidden md:block relative md:w-1/2 w-auto m-13 mt-20">
         <img 
           className="w-full h-auto"
           src={AfricanFood}

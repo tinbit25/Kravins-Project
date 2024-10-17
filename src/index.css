@@ -74,17 +74,17 @@ html{
 }
 
 .bookform {
-  margin-top: -400px; /* Keep this for larger screens */
-  padding: 60px; /* Keep the original padding */
+  margin-top: -400px; 
+  padding: 60px; 
   background-color: black;
   border-radius: 20px;
 }
 
-@media (max-width: 768px) { /* Adjust for smaller screens */
+@media (max-width: 768px) { 
   .bookform {
-    margin-top: 0; /* Reset margin for smaller screens */
-    padding: 30px; /* Reduce padding for smaller screens */
-    left: 0; /* Reset left position */
+    margin-top: 0;
+    padding: 30px;
+    left: 0; 
   }
 }
 

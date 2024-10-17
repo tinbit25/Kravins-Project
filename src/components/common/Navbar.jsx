@@ -10,42 +10,81 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="absolute right-0 top-0 z-10 p-4 flex justify-end bg-transparent">
       {/* Hamburger menu icon */}
-      <div className="menu-icon" onClick={toggleMenu}>
+      <div className="text-white text-2xl cursor-pointer md:hidden" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      {/* Navigation links with active class for animation */}
-      <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+      {/* Navigation links */}
+      <ul
+        className={`${
+          isOpen ? 'left-0 opacity-100' : '-left-full opacity-0'
+        } fixed top-0 h-screen w-[400px] bg-black bg-opacity-80 text-white flex flex-col items-start space-y-8 p-8 transition-all duration-700 ease-in-out md:static md:flex-row md:h-auto md:w-auto md:bg-transparent md:space-y-0 md:space-x-8 md:p-0 md:opacity-100`}>
         <li>
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Home
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
+            }>
+            <span className="relative after:absolute text-xl after:content-[''] after:w-0 after:h-[2px] after:bg-orange-500 after:left-0 after:-bottom-[5px] after:transition-all after:duration-500 hover:text-orange-500 hover:scale-110 hover:after:w-full transition-transform ease-in-out duration-300">
+              Home
+            </span>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
-            About Us
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
+            }>
+            <span className="relative after:absolute text-xl after:content-[''] after:w-0 after:h-[2px] after:bg-orange-500 after:left-0 after:-bottom-[5px] after:transition-all after:duration-500 hover:text-orange-500 hover:scale-110 hover:after:w-full transition-transform ease-in-out duration-300">
+              About Us
+            </span>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Contact Us
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
+            }>
+            <span className="relative after:absolute text-xl after:content-[''] after:w-0 after:h-[2px] after:bg-orange-500 after:left-0 after:-bottom-[5px] after:transition-all after:duration-500 hover:text-orange-500 hover:scale-110 hover:after:w-full transition-transform ease-in-out duration-300">
+              Contact Us
+            </span>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/menu" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Our Menu
+          <NavLink
+            to="/menu"
+            className={({ isActive }) =>
+              isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
+            }>
+            <span className="relative after:absolute text-xl after:content-[''] after:w-0 after:h-[2px] after:bg-orange-500 after:left-0 after:-bottom-[5px] after:transition-all after:duration-500 hover:text-orange-500 hover:scale-110 hover:after:w-full transition-transform ease-in-out duration-300">
+              Our Menu
+            </span>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/order" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Order/Get Offer
+          <NavLink
+            to="/order"
+            className={({ isActive }) =>
+              isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
+            }>
+            <span className="relative after:absolute text-xl after:content-[''] after:w-0 after:h-[2px] after:bg-orange-500 after:left-0 after:-bottom-[5px] after:transition-all after:duration-500 hover:text-orange-500 hover:scale-110 hover:after:w-full transition-transform ease-in-out duration-300">
+              Order/Get Offer
+            </span>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/become-chef" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Become a Kravinz Chef
+          <NavLink
+            to="/become-chef"
+            className={({ isActive }) =>
+              isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
+            }>
+            <span className="relative after:absolute text-xl after:content-[''] after:w-0 after:h-[2px] after:bg-orange-500 after:left-0 after:-bottom-[5px] after:transition-all after:duration-500 hover:text-orange-500 hover:scale-110 hover:after:w-full transition-transform ease-in-out duration-300">
+              Become a Kravinz Chef
+            </span>
           </NavLink>
         </li>
       </ul>

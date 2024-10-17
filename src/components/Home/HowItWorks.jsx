@@ -47,7 +47,7 @@ const HowItWorks = () => {
               transition={{ duration: 1, ease: "easeInOut" }}
               loading="lazy"
             >
-              <div className=" md:px-6 py-40 rounded-lg shadow-lg text-center">
+              <div className=" md:px-6 py-32 md:py-40 rounded-lg shadow-lg text-center">
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#C9A581] mx-auto mb-4">
                   {step.icon}
                 </div>

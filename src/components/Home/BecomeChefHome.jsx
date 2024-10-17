@@ -16,7 +16,7 @@ const BecomeChefHome = () => {
   };
 
   return (
-    <section className="py-16 text-white">
+    <section className="py-16 text-white overflow-hidden">
       <div className="p-8">
         <div className="space-y-8">
 

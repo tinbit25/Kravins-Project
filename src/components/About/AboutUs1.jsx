@@ -25,7 +25,7 @@ const AboutUs1 = () => {
   };
 
   return (
-    <section className="text-white py-16 px-4 md:px-8">
+    <section className="text-white py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Section */}
         <motion.img

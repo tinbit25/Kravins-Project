@@ -6,10 +6,10 @@ const Section1 = () => {
   const delay = 0; 
 
   return (
-    <section className="relative py-20 px-6 text-white mb-48">
+    <section className="relative py-20 px-6 text-white mb-48 overflow-hidden">
       {/* Animated Background */}
       <motion.div
-        className="absolute inset-0 w-screen "
+        className="absolute inset-0 w-screen"
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: 'cover',

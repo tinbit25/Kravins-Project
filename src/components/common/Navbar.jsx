@@ -20,7 +20,7 @@ const Navbar = () => {
       <ul
         className={`${
           isOpen ? 'left-0 opacity-100' : '-left-full opacity-0'
-        } fixed top-0 h-screen w-[400px] bg-black bg-opacity-80 text-white flex flex-col items-start space-y-8 p-8 transition-all duration-700 ease-in-out md:static md:flex-row md:h-auto md:w-auto md:bg-transparent md:space-y-0 md:space-x-8 md:p-0 md:opacity-100`}>
+        } fixed top-0 h-screen w-[60%] bg-black bg-opacity-80 text-white flex flex-col items-start space-y-8 p-8 transition-all duration-700 ease-in-out md:static md:flex-row md:h-auto md:w-auto md:bg-transparent md:space-y-0 md:space-x-8 md:p-0 md:opacity-100`}>
         <li>
           <NavLink
             to="/"

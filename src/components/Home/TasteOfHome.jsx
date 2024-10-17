@@ -71,7 +71,7 @@ const TasteOfHome = () => {
             Learn More
           </button>
         </Link>
-        <Link to="/Ourstory">
+        <Link to="/how-it-works">
           <button className="bg-transparent border-2 border-white text-white py-2 px-4 transition duration-500 hover:bg-white hover:text-black hover:shadow-lg hover:scale-110">
             See How It Works
           </button>

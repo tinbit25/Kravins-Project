@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+body{
   scroll-behavior: smooth;
   font-family: "Courgette", cursive;
   font-weight: 400;

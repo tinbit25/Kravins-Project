@@ -33,7 +33,7 @@ const OurCommitment = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.2, 
+    threshold: 0.4, 
   });
 
   return (
@@ -72,7 +72,7 @@ const OurCommitment = () => {
               </p>
 
               {/* Floating Glow Effect */}
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500 bg-gradient-to-r from-transparent via-[#2e1802] to-transparent blur-md z-0"></div>
+              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white to-transparent blur-md z-0"></div>
             </div>
           ))}
         </div>

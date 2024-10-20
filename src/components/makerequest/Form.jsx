@@ -82,7 +82,7 @@ const Form = () => {
       <div className="flex flex-col md:flex-row justify-between w-full h-full">
         <motion.div className="hidden md:block mt-32 z-10">
           <h2 className="text-4xl font-extrabold text-[#C9A581] text-center mb-5">
-            Make Your Reservation
+          Satisfy Your Kravinz
           </h2>
           <p className="text-xl text-gray-300 mb-6 text-center max-w-2xl mx-auto">
             Planning an unforgettable dining experience? Whether it's a personal celebration, corporate event, or a special occasion, we are here to make it seamless for you. Fill out the form below, and our team will get in touch to curate a customized experience tailored to your needs.
@@ -107,7 +107,7 @@ const Form = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full p-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-[#C9A581] border-none"
+                  className="w-full p-2 bg-gray- text-white focus:ring-2 focus:ring-[#C9A581] border-b-white"
                   placeholder="Enter your name"
                 />
               </div>

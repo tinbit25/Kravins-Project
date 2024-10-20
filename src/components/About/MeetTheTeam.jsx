@@ -60,7 +60,7 @@ const MeetTheTeam = () => {
             </p>
 
             {/* Glow effect on hover */}
-            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-transparent via-[#2e1802] to-transparent blur-md"></div>
+            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-r from-transparent via-[#d3c7bc] to-transparent blur-md"></div>
           </div>
         ))}
       </div>

@@ -65,6 +65,7 @@ const MealOrderPage = () => {
   };
 
   return (
+    <div className="div">
     <motion.div
       style={{
         backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(${BackgroundImage})`,
@@ -72,20 +73,24 @@ const MealOrderPage = () => {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}
-      className="min-h-screen py-10 px-6"
+      className="h-full py-4 px-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <ScrollToTop />
-      <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg mt-20 bg-opacity-90">
-        <h1 className=" Tfont text-3xl font-extrabold text-center text-[#C9A581] mb-8">
+      <h1 className=" Tfont my-64 text-3xl font-extrabold text-center text-[#C9A581] ">
           Don't Let Food Be the Hardest Part of Leaving Home
         </h1>
+      </motion.div>
+      <div className="max-w-5xl text-white mx-auto p-8 shadow-lg rounded-lg bg-opacity-90">
+       
+        
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-10">
+        
           {/* Meal Preference Section */}
           <div className="mb-6 w-full md:w-1/2 relative">
-            <h2 className="text-xl font-semibold mb-2">Choose Your Preference</h2>
+           
             <div
               className="w-full p-3 border rounded-md cursor-pointer"
               onClick={() => setShowOptions(!showOptions)}
@@ -111,7 +116,7 @@ const MealOrderPage = () => {
 
           {/* Number of Meals Section */}
           <div className="mb-6 w-full md:w-1/2">
-            <h2 className="text-xl font-semibold mb-2">Number of Meals</h2>
+           
             <input
               type="number"
               value={numberOfMeals}
@@ -124,8 +129,7 @@ const MealOrderPage = () => {
 
         {/* Personal Info Section */}
         <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Personal Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <input
               type="text"
               name="name"
@@ -155,8 +159,7 @@ const MealOrderPage = () => {
 
         {/* Address Section */}
         <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Address</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <input
               type="text"
               name="street"
@@ -194,7 +197,8 @@ const MealOrderPage = () => {
           </button>
         </div>
       </div>
-    </motion.div>
+    
+    </div>
   );
 };
 

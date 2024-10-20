@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import BackgroundImage from '../assets/images/pexels-elevate-12673.webp';
+import BackgroundImage from '../assets/images/pexels-elevate-12673 - Copy.jpg';
+import sideImage from '../assets/images/pexels-yente-van-eynde-1263034-2403391.jpg';
 import ScrollToTop from './ScrollToTop';
 
 const BecomeAChef = () => {
@@ -14,7 +15,9 @@ const BecomeAChef = () => {
     additionalComments: '',
   });
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');  const handleChange = (e) => {
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData2, [name]: value });
   };
@@ -33,7 +36,7 @@ const BecomeAChef = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
-  
+
     try {
       const response = await fetch('http://localhost:5000/submitchefform', {
         method: 'POST',
@@ -42,12 +45,12 @@ const BecomeAChef = () => {
         },
         body: JSON.stringify(formData2),
       });
-  
+
       if (!response.ok) {
         const errorText = await response.text();
         throw new Error(errorText);
       }
-  
+
       alert('Form submitted successfully!');
       setFormData({
         name: '',
@@ -65,28 +68,45 @@ const BecomeAChef = () => {
       setLoading(false);
     }
   };
- 
+
   return (
-    <motion.div
-      style={{
-        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(${BackgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-      className="min-h-screen py-10 px-6"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <ScrollToTop />
-      <div className="max-w-3xl text-white mx-auto p-8 shadow-lg rounded-lg bg-opacity-90">
-        <h1 className=" Tfont text-3xl font-bold text-center text-[#C9A581] mb-8">
-          Become a Kravinz Chef
+    <div>
+      <motion.div
+      
+        style={{
+          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(${BackgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+        className="min-h-full py-10 px-6"
+        initial={{ opacity: 0,scaleX:1.1 }}
+        animate={{ opacity: 1,scaleX:1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="Tfont text-5xl font-bold text-center text-[#C9A581] my-56">
+          Cook with Kravinz
         </h1>
-        <form onSubmit={handleSubmit}>
+      </motion.div>
+      <ScrollToTop />
+      <div className="p-6 rounded-lg shadow-md  m-20">
+      <h2 className="text-2xl font-bold text-center">Become a Kravinz Chef</h2>
+      <p className="text-lg text-gray-700 text-center">
+        Are you passionate about cooking and looking for a way to share your culinary skills with the world? Cook with Kravinz invites you to join our community of talented chefs and home cooks dedicated to creating delicious meals and unforgettable experiences. Whether you're an experienced chef or just starting your culinary journey, we welcome you to become a Kravinz Chef. As a member, you'll expand your skills, share your passion for cooking, and make a positive impact in your community. Join us and discover the joy of cooking with Kravinz!
+      </p>
+    </div>
+
+      <div className="w-full flex space-x-10 shadow-lg rounded-lg bg-black ">
+       
+
+        {/* Form Sliding from Right */}
+        <motion.form
+          onSubmit={handleSubmit}
+          className="w-1/2 flex flex-col justify-between p-9"
+          
+        >
           {/* Name Input */}
-          <div className="mb-6">
+          <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-xl font-bold mb-2">Name</label>
             <input
               type="text"
@@ -94,13 +114,13 @@ const BecomeAChef = () => {
               value={formData2.name}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
               placeholder="Your Name"
             />
-          </div>
+          </motion.div>
 
           {/* Phone Input */}
-          <div className="mb-6">
+          <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-xl font-bold mb-2">Phone Number (preferably WhatsApp)</label>
             <input
               type="tel"
@@ -108,13 +128,13 @@ const BecomeAChef = () => {
               value={formData2.phone}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
               placeholder="Your Phone Number"
             />
-          </div>
+          </motion.div>
 
           {/* Location Input */}
-          <div className="mb-6">
+          <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-xl font-bold mb-2">Where are you from?</label>
             <input
               type="text"
@@ -122,47 +142,47 @@ const BecomeAChef = () => {
               value={formData2.location}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
               placeholder="Your Location"
             />
-          </div>
+          </motion.div>
 
           {/* Availability Selection */}
-          <div className="mb-6">
+          <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-xl font-bold mb-2">What is your availability?</label>
             <select
               name="availability"
               value={formData2.availability}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
             >
               <option value="">Select your availability</option>
               <option value="Full-time (40 hours and above/week)">Full-time (40 hours and above/week)</option>
               <option value="Full-time (below 40 hours/week)">Full-time (below 40 hours/week)</option>
               <option value="Part-time (below 20 hours/week)">Part-time (below 20 hours/week)</option>
             </select>
-          </div>
+          </motion.div>
 
           {/* Cooking Level Selection */}
-          <div className="mb-6">
+          <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-xl font-bold mb-2">What is your level of cooking?</label>
             <select
-              name="cookingLevel"
+              name="cokingLevel"
               value={formData2.cookingLevel}
               onChange={handleChange}
               required
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
             >
               <option value="">Select your cooking level</option>
               <option value="I know how to cook">I know how to cook</option>
               <option value="I have been cooking for people (as a business)">I have been cooking for people (as a business)</option>
               <option value="I am a professional chef (gone to a catering school)">I am a professional chef (gone to a catering school)</option>
             </select>
-          </div>
+          </motion.div>
 
           {/* Reason for Joining Kravinz */}
-          <div className="mb-6">
+          <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-xl font-bold mb-2">Why do you want to join Kravinz?</label>
             <div className="flex flex-col">
               {["I need the extra money", "I love cooking", "Just exploring"].map((option) => (
@@ -178,33 +198,52 @@ const BecomeAChef = () => {
                 </label>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Additional Comments Section */}
-          <div className="mb-6">
+          <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-xl font-bold mb-2">Additional Comments</label>
             <textarea
               name="additionalComments"
               value={formData2.additionalComments}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
-              placeholder="Any additional information..."
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
               rows="4"
-            ></textarea>
-          </div>
+              placeholder="Any additional comments or questions..."
+            />
+          </motion.div>
 
           {/* Submit Button */}
-          <div className="text-center mt-8">
-            <button
-              type="submit"
-              className="bg-[#C9A581] text-white px-6 py-3 rounded-md hover:bg-opacity-90 focus:outline-none transition duration-300"
+          <motion.button
+            type="submit"
+            className="bg-[#C9A581] text-white py-3 px-6 transition duration-300 hover:bg-[#A66F59]"
+            disabled={loading}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
+          >
+            {loading ? 'Submitting...' : 'Submit'}
+          </motion.button>
+
+          {/* Error Message */}
+          {error && (
+            <motion.p
+              className="mt-4 text-red-500 text-center"
+              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
             >
-              Submit Application
-            </button>
-          </div>
-        </form>
+              {error}
+            </motion.p>
+          )}
+        </motion.form>
+         {/* Side Image Sliding from Left */}
+         <motion.img
+          src={sideImage}
+          alt=""
+          className="w-1/2 "
+          initial={{ x: 100, opacity: 0 }} 
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

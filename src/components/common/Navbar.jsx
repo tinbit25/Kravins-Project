@@ -61,7 +61,7 @@ const Navbar = () => {
               isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
             }>
             <span className="relative after:absolute text-xl after:content-[''] after:w-0 after:h-[2px] after:bg-orange-500 after:left-0 after:-bottom-[5px] after:transition-all after:duration-500 hover:text-orange-500 hover:scale-110 hover:after:w-full transition-transform ease-in-out duration-300">
-              Our Menu
+              Book Chef
             </span>
           </NavLink>
         </li>

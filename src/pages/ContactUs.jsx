@@ -49,7 +49,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className=" px-6 bg-[#0D0D0D] text-white">
+    <div className="bg-[#0D0D0D] text-white">
         <ScrollToTop />
       <Cbg />
       <div className={`transition-transform duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 '}`}>

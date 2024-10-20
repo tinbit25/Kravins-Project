@@ -70,7 +70,7 @@ const BecomeAChef = () => {
   };
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <motion.div
       
         style={{
@@ -84,14 +84,30 @@ const BecomeAChef = () => {
         animate={{ opacity: 1,scaleX:1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="Tfont text-5xl font-bold text-center text-[#C9A581] my-56">
+        <div className="my-56">
+        <h1 className="Tfont text-5xl font-bold text-center text-[#C9A581] ">
           Cook with Kravinz
         </h1>
+        <img
+        className='mx-auto my'
+    loading="lazy"
+    decoding="async"
+    width="240"
+    height="240"
+    src="https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2.png"
+    alt=""
+    srcSet="https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2.png 240w, https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2-150x150.png 150w, https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2-210x210.png 210w"
+    sizes="(max-width: 240px) 100vw, 240px"
+/>
+</div>
+
       </motion.div>
       <ScrollToTop />
-      <div className="p-6 rounded-lg shadow-md  m-20">
-      <h2 className="text-2xl font-bold text-center">Become a Kravinz Chef</h2>
-      <p className="text-lg text-gray-700 text-center">
+      <div
+      
+      className="p-6 rounded-lg shadow-md  m-20">
+      <h2 className="text-2xl font-bold text-center text-[#C9A581]">Become a Kravinz Chef</h2>
+      <p className="text-lg mx-auto text-center">
         Are you passionate about cooking and looking for a way to share your culinary skills with the world? Cook with Kravinz invites you to join our community of talented chefs and home cooks dedicated to creating delicious meals and unforgettable experiences. Whether you're an experienced chef or just starting your culinary journey, we welcome you to become a Kravinz Chef. As a member, you'll expand your skills, share your passion for cooking, and make a positive impact in your community. Join us and discover the joy of cooking with Kravinz!
       </p>
     </div>

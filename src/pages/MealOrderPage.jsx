@@ -79,9 +79,14 @@ const MealOrderPage = () => {
       transition={{ duration: 1 }}
     >
       <ScrollToTop />
-      <h1 className=" Tfont my-64 text-3xl font-extrabold text-center text-[#C9A581] ">
-          Don't Let Food Be the Hardest Part of Leaving Home
+      <motion.div className="my-56">
+      <h1 className=" Tfont  text-5xl py-4 font-extrabold text-center text-[#C9A581] ">
+          Make Request
         </h1>
+      <h2 className=" Tfont text-3xl font-extrabold text-center text-[#C9A581] ">
+          Don't Let Food Be the Hardest Part of Leaving Home
+        </h2>
+        </motion.div>
       </motion.div>
       <div className="max-w-5xl text-white mx-auto p-8 shadow-lg rounded-lg bg-opacity-90">
        

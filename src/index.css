@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Courgette&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Gowun+Batang&family=Nosifer&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
   scroll-behavior: smooth;
-  font-family: "Courgette", cursive;
-  font-weight: 400;
+  /* font-family: "Courgette", cursive; */
+  font-family: "Akaya Telivigala", system-ui;
+  /* font-family: "Gowun Batang", serif; */
   font-style: normal;
+  font-size: larger;
   color: white;
 }
 .Tfont{
-  font-family: "Vollkorn", serif;
+  font-family: "Mate SC", serif;
 }
 
 

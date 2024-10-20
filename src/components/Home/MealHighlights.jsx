@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import streetFood from '../../assets/images/New Picture (1).png';
 import WafricaFood from '../../assets/images/west-african-entree-jollof-rice-overhead-view-dish-chicken-shito-sauce-boiled-egg-197234742.webp';
+import EafricaFood from '../../assets/images/Pngtree—burger restaurant food background_2445030.jpg';
 
 const meals = [
   {
@@ -15,7 +16,7 @@ const meals = [
     title: 'West African Meals',
     description:
       'Experience the rich flavors of West Africa, featuring iconic dishes such as Jollof Rice, Egusi Soup, and more.',
-    image: WafricaFood,
+    image: EafricaFood,
   },
   {
     title: 'East African Meals',
@@ -41,7 +42,7 @@ const MealHighlights = () => {
   const [slidesToShow, setSlidesToShow] = useState(3); // Default for large screens
   const totalMeals = meals.length;
 
-  // Set the number of slides based on the screen width
+  
   const updateSlidesToShow = () => {
     if (window.innerWidth < 640) {
       setSlidesToShow(1); // 1 slide for small screens

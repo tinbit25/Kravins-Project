@@ -90,7 +90,7 @@ const Form = () => {
         </motion.div>
         <div className="">
           <motion.div
-            className="mt-28 mr-12 ml-5 max-w-full md:max-w-lg p-5 rounded-3xl bg-black bg-opacity-80 z-12"
+            className="mt-20 mr-10 ml-5 max-w-full md:max-w-lg p-5 rounded-3xl bg-black bg-opacity-80 z-12"
             initial={{ x: '-100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}

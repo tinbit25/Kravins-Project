@@ -66,29 +66,31 @@ const Form = () => {
 
   return (
     <div className="relative my-72 w-full">
-      <div className="hidden md:block w-full h-[500px]"> 
+      <div className="hidden md:block w-full">
         <div
           style={{
             backgroundImage: `url(${Image})`,
             backgroundPosition: 'center',
-            backgroundSize: 'cover',
+            backgroundSize: 'cover', // Change to 'contain' if needed
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(50%)',
+            height: '500px', // Maintain fixed height for the background
           }}
-          className="absolute inset-0 w-full h-full" // Full width and height
+          className="absolute inset-0 w-full"
         ></div>
-        <div className="flex justify-between w-full h-full">
-          <motion.div className="my-auto z-10">
-            <h2 className="text-4xl font-extrabold text-[#C9A581] text-center mb-5">
-              Make Your Reservation
-            </h2>
-            <p className="text-xl text-gray-300 mb-6 text-center max-w-2xl mx-auto">
-              Planning an unforgettable dining experience? Whether it's a personal celebration, corporate event, or a special occasion, we are here to make it seamless for you. Fill out the form below, and our team will get in touch to curate a customized experience tailored to your needs.
-            </p>
-          </motion.div>
-          <div className="">
+      </div>
+      <div className="flex flex-col md:flex-row justify-between w-full h-full">
+        <motion.div className="hidden md:block mt-32 z-10">
+          <h2 className="text-4xl font-extrabold text-[#C9A581] text-center mb-5">
+            Make Your Reservation
+          </h2>
+          <p className="text-xl text-gray-300 mb-6 text-center max-w-2xl mx-auto">
+            Planning an unforgettable dining experience? Whether it's a personal celebration, corporate event, or a special occasion, we are here to make it seamless for you. Fill out the form below, and our team will get in touch to curate a customized experience tailored to your needs.
+          </p>
+        </motion.div>
+        <div className="">
           <motion.div
-            className="mt-36 mr-12 max-w-full md:max-w-lg p-5 rounded-3xl bg-black bg-opacity-80 z-12"
+            className="mt-28 mr-12 ml-5 max-w-full md:max-w-lg p-5 rounded-3xl bg-black bg-opacity-80 z-12"
             initial={{ x: '-100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -220,7 +222,6 @@ const Form = () => {
               {error && <p className="text-red-500 text-center mt-3">{error}</p>}
             </form>
           </motion.div>
-          </div>
         </div>
       </div>
     </div>

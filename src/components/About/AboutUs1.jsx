@@ -25,8 +25,8 @@ const AboutUs1 = () => {
   };
 
   return (
-    <section className="text-white py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section className="text-white py-16 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Image Section */}
         <motion.img
           src={AfricanFood}
@@ -40,7 +40,7 @@ const AboutUs1 = () => {
 
         {/* Text Section */}
         <motion.div
-          className="max-w-5xl mx-auto p-4 md:p-8"
+          className="max-w-5xl mx-auto p-4 lg:p-8"
           initial="hidden"
           whileInView="visible"
           variants={containerVariants}
@@ -64,12 +64,12 @@ const AboutUs1 = () => {
 
           {/* Info Section */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={itemVariants}
           >
             {/* First Info Box */}
             <motion.div
-              className="p-6 shadow-lg"
+              className="p-6 shadow-lg text-center lg:text-start "
               variants={itemVariants}
             >
               <h3 className="text-2xl font-semibold mb-4 text-[#C9A581]">Our Promise</h3>
@@ -83,7 +83,7 @@ const AboutUs1 = () => {
               className="p-6 shadow-lg"
               variants={itemVariants}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-[#C9A581]">Cultural Exchange</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-[#C9A581] text-center lg:text-start">Cultural Exchange</h3>
               <p>
                 By connecting you with familiar flavors, we foster cultural exchange, making it easier to embrace new experiences while enjoying the tastes of home.
               </p>

@@ -12,10 +12,10 @@ import ScrollToTop from './ScrollToTop';
 
 const AboutUs = () => {
   return (
-    <>
+    <div className='overflow-hidden'>
           <ScrollToTop /> {/* Ensure this is placed inside Router */}
 
-    <div className="bg-cover bg-center"
+    <div className="bg-cover bg-center "
      style={{
       backgroundImage: `url(${BackgroundImage})`,
       backgroundSize: 'cover',
@@ -33,7 +33,7 @@ const AboutUs = () => {
       <OurCommitment />
       <MeetTheTeam />
       
-       </>
+       </div>
   )
 }
 

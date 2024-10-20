@@ -1,4 +1,4 @@
-import Image from '../../assets/images/Bookpic.png'; // Ensure this path is correct
+import Image from '../../assets/images/Bookpic.png'; 
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 
@@ -71,10 +71,10 @@ const Form = () => {
           style={{
             backgroundImage: `url(${Image})`,
             backgroundPosition: 'center',
-            backgroundSize: 'cover', // Change to 'contain' if needed
+            backgroundSize: 'cover', 
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(50%)',
-            height: '500px', // Maintain fixed height for the background
+            height: '500px', 
           }}
           className="absolute inset-0 w-full"
         ></div>

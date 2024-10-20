@@ -8,13 +8,13 @@ import AfricanFood from '../../assets/images/pexels-pixabay-461415.jpg';
  
 const OurStory = () => {
   return (
-    <div className='px-4 md:px-20 text-white'>
+    <div className='px-4 xl:px-20 text-white overflow-hidden'>
       {/* Container with responsive padding */}
-      <div className="py-32 mx-auto flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-7">
+      <div className="py-32 mx-auto flex flex-col xl:flex-row items-center justify-center space-y-10 xl:space-y-0 xl:space-x-7">
         
         {/* Image section for small screens */}
         <motion.img 
-          className="w-3/4 md:w-1/4 rounded-lg shadow-lg"
+          className=" w-1/2  xl:w-1/4 rounded-xl shadow-xl"
           src={AfricanFood}
           alt="African Food"
           initial={{ opacity: 0, x: -60 }}
@@ -23,7 +23,7 @@ const OurStory = () => {
         />
 
         {/* Text section */}
-        <div className="flex flex-col items-center text-center px-4 md:px-28">
+        <div className="flex flex-col items-center text-center px-4 xl:px-28">
           {/* Title with smooth transition */}
           <motion.h2 
             className="Tfont font-extrabold text-4xl mb-6 text-[#C9A581]"
@@ -46,7 +46,7 @@ const OurStory = () => {
           
           {/* Description 1 */}
           <motion.p 
-            className="text-lg leading-relaxed mb-4"
+            className="text-xl leading-relaxed mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
@@ -56,7 +56,7 @@ const OurStory = () => {
           
           {/* Description 2 */}
           <motion.p 
-            className="text-lg leading-relaxed mt-4"
+            className="text-xl leading-relaxed mt-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
@@ -67,7 +67,7 @@ const OurStory = () => {
 
         {/* Image section for larger screens */}
         <motion.img 
-          className="w-3/4 md:w-1/4 rounded-lg shadow-lg"
+          className="w-3/4 hidden xl:block xl:w-1/4 rounded-xl shadow-xl"
           src={AfricanFood}
           alt="African Food"
           initial={{ opacity: 0, x: 60 }}

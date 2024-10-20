@@ -10,9 +10,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute right-0 top-0 z-10 p-4 flex justify-end bg-transparent">
+    <nav className="absolute right-0 top-0 z-10 p-4 flex justify-end bg-transparent overflow-hidden">
       {/* Hamburger menu icon */}
-      <div className="text-white text-2xl cursor-pointer md:hidden" onClick={toggleMenu}>
+      <div className="text-white text-2xl cursor-pointer lg:hidden" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
 
@@ -20,7 +20,7 @@ const Navbar = () => {
       <ul
         className={`${
           isOpen ? 'left-0 opacity-100' : '-left-full opacity-0'
-        } fixed top-0 h-screen w-[60%] bg-black bg-opacity-80 text-white flex flex-col items-start space-y-8 p-8 transition-all duration-700 ease-in-out md:static md:flex-row md:h-auto md:w-auto md:bg-transparent md:space-y-0 md:space-x-8 md:p-0 md:opacity-100`}>
+        } fixed top-0 h-screen w-[60%] bg-black bg-opacity-80 text-white flex flex-col items-start space-y-8 p-8 transition-all duration-700 ease-in-out lg:static lg:flex-row lg:h-auto lg:w-auto lg:bg-transparent lg:space-y-0 lg:space-x-8 lg:p-0 lg:opacity-100`}>
         <li>
           <NavLink
             to="/"

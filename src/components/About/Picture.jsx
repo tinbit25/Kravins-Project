@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import BackgroundImage from '../../assets/images/New.png';
+import BackgroundImage from '../../assets/images/pexels-pixabay-461415.jpg';
 
 const Picture = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -15,18 +15,18 @@ const Picture = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative w-full h-96 hidden lg:block overflow-hidden"> {/* Full screen height */}
+      {/* Parallax background image */}
       <div
-        className="h-screen bg-cover bg-center hidden md:block"
+        className="h-full " 
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: `center ${offsetY * 0.1}px`,
+          backgroundPosition: `bottom center bottom ${offsetY * 0.1}px`, 
           backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat',
         }}
-      >
-      
-      </div>
+      ></div>
     </div>
   );
 };

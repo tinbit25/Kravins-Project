@@ -107,8 +107,8 @@ const Form = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full p-2 bg-gray- text-white focus:ring-2 focus:ring-[#C9A581] border-b-white"
-                  placeholder="Enter your name"
+                  className="w-full p-2 bg-transparent text-white border-b border-b-white focus:outline-none focus:ring-transparent focus:border-b-[#C9A581]"
+                  
                 />
               </div>
               <div>
@@ -122,8 +122,8 @@ const Form = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full p-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-[#C9A581] border-none"
-                  placeholder="Enter your phone number"
+                  className="w-full p-2 bg-transparent text-white border-b border-b-white focus:outline-none focus:ring-transparent focus:border-b-[#C9A581]"
+                  
                 />
               </div>
               <div>
@@ -137,8 +137,8 @@ const Form = () => {
                   value={formData.origin}
                   onChange={handleChange}
                   required
-                  className="w-full p-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-[#C9A581] border-none"
-                  placeholder="Enter your location"
+                  className="w-full p-2 bg-transparent text-white border-b border-b-white focus:outline-none focus:ring-transparent focus:border-b-[#C9A581]"
+                 
                 />
               </div>
               <div>
@@ -152,8 +152,8 @@ const Form = () => {
                   value={formData.budget}
                   onChange={handleChange}
                   required
-                  className="w-full p-2 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-[#C9A581] border-none"
-                  placeholder="Enter your budget"
+                  className="w-full p-2 bg-transparent text-white border-b border-b-white focus:outline-none focus:ring-transparent focus:border-b-[#C9A581]"
+                  
                 />
               </div>
               <div className="flex flex-col space-y-4 md:flex-row md:space-x-3">

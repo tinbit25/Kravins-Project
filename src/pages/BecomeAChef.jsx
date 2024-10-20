@@ -96,13 +96,13 @@ const BecomeAChef = () => {
       </p>
     </div>
 
-      <div className="w-full flex space-x-10 shadow-lg rounded-lg bg-black ">
+      <div className="w-full flex lg:flex-row flex-col space-x-10 shadow-lg rounded-lg bg-black ">
        
 
         {/* Form Sliding from Right */}
         <motion.form
           onSubmit={handleSubmit}
-          className="w-1/2 flex flex-col justify-between p-9"
+          className="w-full lg:w-1/2 flex flex-col justify-between p-9"
           
         >
           {/* Name Input */}
@@ -237,7 +237,7 @@ const BecomeAChef = () => {
          <motion.img
           src={sideImage}
           alt=""
-          className="w-1/2 "
+          className="w-1/2 hidden lg:block"
           initial={{ x: 100, opacity: 0 }} 
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}

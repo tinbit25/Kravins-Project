@@ -68,20 +68,9 @@ body{
   }
 }
 
-.bookform {
-  margin-top: -400px; 
-  padding: 60px; 
-  background-color: black;
-  border-radius: 20px;
-}
 
-@media (max-width: 768px) { 
-  .bookform {
-    margin-top: 0;
-    padding: 30px;
-    left: 0; 
-  }
-}
+
+
 
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import Home from './pages/Home';
@@ -30,7 +31,8 @@ function App() {
       </div>
       {/* Logo in the center */}
       <div className="text-center absolute top-0 left-0  mb-4">
-  <img src={logoImage} alt="LOGO" className="w-1/2 sm:w-96 h-auto" />
+        <Link to="/"><img src={logoImage} alt="LOGO" className="w-1/2 sm:w-96 h-auto" /></Link>
+  
 </div>
     </Router>
   );

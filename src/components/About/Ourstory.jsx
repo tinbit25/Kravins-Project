@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import AfricanFood from '../../assets/images/Jollof_Rice_with_Stew.jpg';
+import AfricanFood from '../../assets/images/pexels-pixabay-461415.jpg';
 
 
   // OurStory Component

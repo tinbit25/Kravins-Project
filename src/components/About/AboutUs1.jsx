@@ -31,7 +31,7 @@ const AboutUs1 = () => {
         <motion.img
           src={AfricanFood}
           alt="African Food"
-          className="rounded-tr-full rounded-br-full shadow-lg w-full h-auto"
+          className=" hidden lg:block rounded-tr-full rounded-br-full shadow-lg w-full h-auto"
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}

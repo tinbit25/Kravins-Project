@@ -15,7 +15,7 @@ const Picture = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-96 hidden lg:block overflow-hidden"> {/* Full screen height */}
+    <div className="relative w-full h-96 overflow-hidden"> {/* Full screen height */}
       {/* Parallax background image */}
       <div
         className="h-full" 

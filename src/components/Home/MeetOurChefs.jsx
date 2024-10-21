@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import AfricanFood from '../../assets/images/New Picture (3).png';
+import AfricanFood from '../../assets/images/ChefImage.png';
 import { Link } from 'react-router-dom';
 
 const MeetOurChefs = () => {
@@ -25,7 +25,7 @@ const MeetOurChefs = () => {
   return (
     <section className="p-8 text-white">
       <motion.div
-        className="max-w-5xl mx-auto text-center"
+        className="max-w-full text-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: [0.5, 0.1, 0.1, 0.9] }}
@@ -35,7 +35,7 @@ const MeetOurChefs = () => {
         <div className="flex flex-col items-center justify-center space-y-6">
           
           {/* Image Gallery */}
-          <motion.div className='flex flex-wrap justify-center items-center max-w-6xl'>
+          <motion.div className='flex flex-wrap justify-center items-center max-w-full'>
             {chefData.map((chef, index) => (
               <motion.div
                 key={index}

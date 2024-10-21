@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import AfricanFood from '../../assets/images/pexels-pixabay-461415.jpg';
+import SideImage from '../../assets/images/pexels-pixabay-461415.jpg';
 
 
   // OurStory Component
@@ -14,8 +14,8 @@ const OurStory = () => {
         
         {/* Image section for small screens */}
         <motion.img 
-          className="w-1/2 xl:w-96 rounded-xl shadow-xl"
-          src={AfricanFood}
+          className="w-full xl:w-96 rounded-xl shadow-xl"
+          src={SideImage}
           alt="African Food"
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -68,7 +68,7 @@ const OurStory = () => {
         {/* Image section for larger screens */}
         <motion.img 
           className="w-3/4 hidden xl:block xl:w-96 rounded-xl shadow-xl"
-          src={AfricanFood}
+          src={SideImage}
           alt="African Food"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}

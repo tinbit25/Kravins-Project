@@ -30,23 +30,23 @@ return (
 <section ref={sectionRef} className="mb-11">
 <div className={`${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-24'} transition-all duration-1000`}>
 <div className="flex flex-col space-y-10 p-8 ">
-<h2 className="Tfont md:ml-12 mt-10 text-3xl md:text-5xl text-[#C9A581] leading-[0.6] ">
+<h2 className="Tfont md:ml-12 mt-10 text-3xl md:text-5xl text-[#C9A581] md:leading-[0.6]  ">
 TIRED OF DELIVERY
 </h2>
-<h2 className="Tfont text-3xl md:text-5xl text-[#C9A581] mb-6 text-center leading-[0.5]">
+<h2 className="Tfont text-3xl md:text-5xl text-[#C9A581] mb-6 text-center md:leading-[0.5]">
 DISAPPOINTMENTS?
 </h2>
 
 
     {/* Main Text */}
     
-    <p className="text-xl text-center md:text-start mx-auto md:ml-96 md:pl-96 md:pr-20 text-gray-300 leading-relaxed">
+    <p className="text-xl text-center md:text-start mx-auto lg:ml-96 md:pl-96 lg:pr-20 text-gray-300 leading-relaxed">
       Let’s be honest—aren’t we all fed up with <br/>spending too much on delivery apps only<br/> to receive meals that are <span className="font-bold text-[#BA9774]">generic</span>, inconsistent,<br/> and far from satisfying?
     </p>
-    <div className="flex flex-col md:flex-row space-x-7">
+    <div className="flex flex-col lg:flex-row space-x-7">
     
     
-    <div className="md:hidden relative md:w-1/2 w-auto m-13 mt-20">
+    <div className="lg:hidden relative lg:w-1/2 w-2/3 m-13 mx-auto mt-20">
         <img 
           className="w-full h-auto"
           src={AfricanFood}
@@ -59,7 +59,7 @@ DISAPPOINTMENTS?
        <p className="text-3xl font-semibold text-[#C9A581]  md:mt-40  leading-10">
       It's time for a change.
     </p>
-    <p className="text-lg text-gray-400 max-w-3xl leading-10">
+    <p className="text-md text-gray-400 max-w-3xl leading-10">
    
       Welcome to <span className="font-bold italic text-[#C9A581]">Kravinz</span>, where we serve your meals exactly how you <span className="italic text-[#BA9774]">krave</span> them—tailored to your taste, budget, and lifestyle. This is the future of dining.
 
@@ -67,7 +67,7 @@ DISAPPOINTMENTS?
     <h3 className="text-2xl font-semibold text-[#C9A581] leading-relaxed">
       Join the Culinary Revolution!
     </h3>
-    <p className="text-lg text-gray-400 leading-10 mb-32">One kitchen at a time.</p>
+    <p className="text-md text-gray-400 leading-10 mb-32">One kitchen at a time.</p>
 
     {/* Contact Button */}
     <Link to="/contact">
@@ -75,7 +75,7 @@ DISAPPOINTMENTS?
       Contact Us Now
     </button></Link>
     </div>
-     <div className=" hidden md:block relative md:w-1/2 w-auto m-13 mt-20">
+     <div className=" hidden lg:block relative md:w-1/2 w-auto m-13 mt-20">
         <img 
           className="w-full h-auto"
           src={AfricanFood}

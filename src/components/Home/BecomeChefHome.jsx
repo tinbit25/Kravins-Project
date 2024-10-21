@@ -1,8 +1,8 @@
 import { FaUtensils } from "react-icons/fa";
 import React from 'react';
-// import BecomeChef from '../../assets/images/inner-pages-gallery-img-6.jpg';
+import BecomeChef from '../../assets/images/chef.jpg';
 
-import streetFood from '../../assets/images/New Picture (1).png';
+import streetFood from '../../assets/images/pexels-dilara-yilmaz-988605972-28766047.jpg';
 import { motion } from 'framer-motion';
 import { useNavigate } from "react-router-dom";
 
@@ -23,10 +23,10 @@ const BecomeChefHome = () => {
         <div className="space-y-8">
 
           {/* Street Food Section */}
-          <div className="pb-8 flex flex-col md:flex-row w-full">
+          <div className="pb-8 flex flex-col lg:flex-row space-y-5 w-full">
             {/* Text content slides from the left */}
             <motion.div
-              className="my-auto border border-red-50 border-opacity-25 py-20 px-10 mx-5 md:w-1/2"
+              className="my-auto border border-red-50 border-opacity-25 py-14 px-10 mx-5 lg:w-1/2"
               initial={{ x: -200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
@@ -79,9 +79,9 @@ const BecomeChefHome = () => {
 
             {/* Image slides from the right */}
             <motion.img
-              className="m-auto w-full md:w-1/2"
-              src={streetFood}
-              alt="Street Food"
+              className="m-auto w-full lg:w-1/2"
+              src={BecomeChef }
+              alt="BecomeChef "
               style={{
                 filter: 'brightness(50%) contrast(120%)',
               }}
@@ -92,10 +92,10 @@ const BecomeChefHome = () => {
           </div>
 
           {/* About Kravinz Section */}
-          <div className="pb-4 flex flex-col md:flex-row w-full">
+          <div className="pb-4 flex flex-col lg:flex-row space-y-5 w-full">
             {/* Image slides from the left */}
             <motion.img
-              className="m-auto w-full md:w-1/2"
+              className="m-auto w-full lg:w-1/2"
               src={streetFood}
               alt="African Food"
               style={{
@@ -108,14 +108,14 @@ const BecomeChefHome = () => {
 
             {/* Text content slides from the right */}
             <motion.div
-              className="my-auto border border-red-50 border-opacity-25 py-20 px-10 mx-5 md:w-1/2"
+              className="my-auto border border-red-50 border-opacity-25 py-32 px-10 mx-5 lg:w-1/2"
               initial={{ x: 200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
             >
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl font-bold">About Kravinz</h2>
-                <p className="mt-4 text-lg">
+                <p className="mt-5 text-lg">
                   At Kravinz, we simplify the food experience for expatriates by providing meal plans cooked with familiar ingredients. Our mission is to make settling into a new country easier while fostering cultural exchange through food.
                 </p>
                 <button

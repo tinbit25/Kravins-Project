@@ -13,16 +13,11 @@ const AboutUs = () => {
   return (
     <div className='overflow-hidden'>
           <ScrollToTop /> {/* Ensure this is placed inside Router */}
-
-    
     <Section1/>
-   
     <AboutUs1/>
-
     <Ourstory />
   <Picture/>
       <WhatMakesUsDifferent />
-      
       <OurCommitment />
       <MeetTheTeam />
       

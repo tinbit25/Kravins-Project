@@ -1,6 +1,6 @@
 import React from 'react';
 import Image1 from '../../assets/images/Bookpic.png';
-import Image2 from '../../assets/images/06cc5bedecba3302168aa7f4db22b4ca.jpg';
+import Image2 from '../../assets/images/HowItworks1.jpg';
 import Image3 from '../../assets/images/Pngtree—cooking.jpg';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';

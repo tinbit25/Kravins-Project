@@ -105,7 +105,7 @@ const BecomeAChef = () => {
       <ScrollToTop />
       <div
       
-      className="p-6 rounded-lg shadow-md  m-20">
+      className="p-6 rounded-lg shadow-md my-28  lg:m-20">
       <h2 className="text-2xl font-bold text-center text-[#C9A581]">Become a Kravinz Chef</h2>
       <p className="text-lg mx-auto text-center">
         Are you passionate about cooking and looking for a way to share your culinary skills with the world? Cook with Kravinz invites you to join our community of talented chefs and home cooks dedicated to creating delicious meals and unforgettable experiences. Whether you're an experienced chef or just starting your culinary journey, we welcome you to become a Kravinz Chef. As a member, you'll expand your skills, share your passion for cooking, and make a positive impact in your community. Join us and discover the joy of cooking with Kravinz!

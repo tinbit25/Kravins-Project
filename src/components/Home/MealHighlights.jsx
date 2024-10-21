@@ -4,6 +4,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import streetFood from '../../assets/images/New Picture (1).png';
 import WafricaFood from '../../assets/images/west-african-entree-jollof-rice-overhead-view-dish-chicken-shito-sauce-boiled-egg-197234742.webp';
 import EafricaFood from '../../assets/images/Pngtree—burger restaurant food background_2445030.jpg';
+import NafricaFood from '../../assets/images/pexels-janetrangdoan-769969.jpg';
+import SafricaFood from '../../assets/images/Jollof_Rice_with_Stew.jpg';
 
 const meals = [
   {
@@ -16,24 +18,24 @@ const meals = [
     title: 'West African Meals',
     description:
       'Experience the rich flavors of West Africa, featuring iconic dishes such as Jollof Rice, Egusi Soup, and more.',
-    image: EafricaFood,
+    image: WafricaFood,
   },
   {
     title: 'East African Meals',
     description: 'Coming Soon...',
-    image: streetFood,
+    image: EafricaFood,
   },
   {
     title: 'South African Meals',
     description:
       'Savor the unique culinary traditions of South Africa, blending indigenous ingredients with international influences.',
-    image: WafricaFood,
+    image: SafricaFood,
   },
   {
     title: 'North African Meals',
     description:
       'Enjoy the exotic tastes of North Africa, featuring dishes rich in spices and flavors.',
-    image: streetFood,
+    image: NafricaFood,
   },
 ];
 

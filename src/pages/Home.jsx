@@ -1,5 +1,5 @@
 import {React,useEffect} from 'react';
-import bgImage from '../assets/images/bg.jpg';
+import bgImage from '../assets/images/BackgroungPictures/HomePageBg.jpg';
 import { motion } from 'framer-motion';
 
 import TasteOfHome from '../components/Home/TasteOfHome';

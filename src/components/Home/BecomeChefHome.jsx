@@ -1,5 +1,7 @@
 import { FaUtensils } from "react-icons/fa";
 import React from 'react';
+// import BecomeChef from '../../assets/images/inner-pages-gallery-img-6.jpg';
+
 import streetFood from '../../assets/images/New Picture (1).png';
 import { motion } from 'framer-motion';
 import { useNavigate } from "react-router-dom";

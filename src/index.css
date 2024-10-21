@@ -8,9 +8,7 @@
 
 body{
   scroll-behavior: smooth;
-  /* font-family: "Courgette", cursive; */
   font-family: "Akaya Telivigala", system-ui;
-  /* font-family: "Gowun Batang", serif; */
   font-style: normal;
   font-size: larger;
   color: white;
@@ -19,7 +17,12 @@ body{
   font-family: "Mate SC", serif;
 }
 
+.about{
+  /* font-family: "Gowun Batang", serif; */
+    font-family: "Courgette", cursive;
 
+
+}
  
   .section-title {
     position: relative;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from 'react-icons/fa';
-import FooterBg from '../../assets/images/Pngtree—healthy thai food recipes concept_15445097.webp';
+import FooterBg from '../../assets/images/BackgroungPictures/FooterBg.webp';
 import Logo from '../../assets/images/Logo/white_orange_logo - Copy.png';
 import { motion } from 'framer-motion';
 

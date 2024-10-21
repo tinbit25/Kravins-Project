@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import BackgroundImage from '../../assets/images/contact-us-image.jpg';
+import BackgroundImage from '../../assets/images/BackgroungPictures/ContactUsBg.jpg';
 
 const Section1 = () => {
   const delay = 0; 

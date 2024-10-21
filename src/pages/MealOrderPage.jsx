@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import BackgroundImage from '../assets/images/Pngtree—fresh fruits and vegetables food_27410.jpg';
+import BackgroundImage from '../assets/images/BackgroungPictures/MealOrder.jpg';
 import ScrollToTop from './ScrollToTop';
 
 const MealOrderPage = () => {

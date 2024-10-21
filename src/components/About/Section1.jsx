@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaUtensils } from 'react-icons/fa';
-import BackgroundImage from '../../assets/images/8917515a62f05ee4e2838f3b21a098a0.jpg';
+import BackgroundImage from '../../assets/images/BackgroungPictures/AboutPageBg.jpg';
 
 const Section1 = () => {
   const delay = 0; 

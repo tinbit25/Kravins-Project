@@ -6,6 +6,7 @@ import WafricaFood from '../../assets/images/west-african-entree-jollof-rice-ove
 import EafricaFood from '../../assets/images/Pngtree—burger restaurant food background_2445030.jpg';
 import NafricaFood from '../../assets/images/pexels-janetrangdoan-769969.jpg';
 import SafricaFood from '../../assets/images/Jollof_Rice_with_Stew.jpg';
+import fafricaFood from '../../assets/images/pngtree-cuisine-african-food-png-image_13185955.png';
 
 const meals = [
   {
@@ -36,6 +37,12 @@ const meals = [
     description:
       'Enjoy the exotic tastes of North Africa, featuring dishes rich in spices and flavors.',
     image: NafricaFood,
+  },
+  {
+    title: 'cuisine',
+    description:
+      'Enjoy the exotic tastes of cuisine, featuring dishes rich in spices and flavors.',
+    image: fafricaFood,
   },
 ];
 

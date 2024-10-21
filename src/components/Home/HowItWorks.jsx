@@ -1,6 +1,7 @@
 import React from 'react';
-import Image1 from '../../assets/images/2e157f8443ad1510bf4b6b8b5a2f70d0.jpg';
+import Image1 from '../../assets/images/Bookpic.png';
 import Image2 from '../../assets/images/06cc5bedecba3302168aa7f4db22b4ca.jpg';
+import Image3 from '../../assets/images/Pngtree—cooking.jpg';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBoxOpen, FaCheckCircle, FaUtensils } from "react-icons/fa";
@@ -25,7 +26,7 @@ const steps = [
     title: '3. Heat & Savor',
     description: 'Your meals arrive fresh and perfectly prepared. Just heat them up and indulge in the comforting taste of home—no hassle, no fuss.',
     icon: <FaUtensils className="text-white" />,
-    image: Image2,
+    image: Image3,
   },
 ];
 

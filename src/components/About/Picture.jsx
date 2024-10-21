@@ -18,15 +18,21 @@ const Picture = () => {
     <div className="relative w-full h-96 hidden lg:block overflow-hidden"> {/* Full screen height */}
       {/* Parallax background image */}
       <div
-        className="h-full " 
+        className="h-full" 
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: `center` , 
+          backgroundPosition: 'center', 
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
         }}
-      ></div>
+      >
+        <div className="flex items-center justify-end h-full p-4 text-white">
+          <h2 className='max-w-lg text-center about text-2xl'>
+            We are dedicated to delivering exceptional culinary experiences that blend tradition with innovation.
+          </h2>
+        </div>
+      </div>
     </div>
   );
 };

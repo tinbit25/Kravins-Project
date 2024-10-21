@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import BackgroundImage from '../assets/images/pexels-elevate-12673 - Copy.jpg';
+import BackgroundImage from '../assets/images/BackgroungPictures/BecomeChefBg.jpg';
 import sideImage from '../assets/images/pexels-yente-van-eynde-1263034-2403391.jpg';
 import ScrollToTop from './ScrollToTop';
 

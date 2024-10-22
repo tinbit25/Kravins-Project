@@ -14,7 +14,7 @@ const MakeRequest = () => {
       <ScrollToTop />
       <div
         style={{
-          backgroundImage: ` linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%),url(${BackgroundImage})`,
+          backgroundImage: ` linear-gradient(to top, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.3) 50%),url(${BackgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',

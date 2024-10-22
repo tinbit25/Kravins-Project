@@ -137,14 +137,14 @@ const Footer = () => {
       </motion.div>
 
       {/* Footer bottom section */}
-      <div className="relative mt-32 text-center border-t border-gray-600 pt-6 -mb-64 z-10">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Kravinz. All rights reserved.</p>
+      <div className="relative mt-32 text-center border-t border-gray-600 pt-6  z-10">
+        <p className="text-sm pb-20">&copy; {new Date().getFullYear()} Kravinz. All rights reserved.</p>
       </div>
 
       {/* Scroll to Top Button */}
       {showScroll && (
         <motion.div
-          className="fixed bottom-8 right-8 z-50 cursor-pointer p-3 bg-[#C9A581] text-white rounded-full shadow-lg"
+          className="fixed bottom-24 right-8 z-50 cursor-pointer p-3 bg-[#C9A581] text-white rounded-full shadow-lg"
           onClick={scrollToTop}
           whileHover={{ scale: 1.2 }}
         >

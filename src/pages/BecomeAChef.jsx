@@ -123,7 +123,7 @@ const BecomeAChef = () => {
         >
           {/* Name Input */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-xl font-bold mb-2">Name</label>
+            <label className="block text-lg font-bold mb-2">Name</label>
             <input
               type="text"
               name="name"
@@ -137,7 +137,7 @@ const BecomeAChef = () => {
 
           {/* Phone Input */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-xl font-bold mb-2">Phone Number (preferably WhatsApp)</label>
+            <label className="block text-lg font-bold mb-2">Phone Number (preferably WhatsApp)</label>
             <input
               type="tel"
               name="phone"
@@ -151,7 +151,7 @@ const BecomeAChef = () => {
 
           {/* Location Input */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-xl font-bold mb-2">Where are you from?</label>
+            <label className="block text-lg font-bold mb-2">Where are you from?</label>
             <input
               type="text"
               name="location"
@@ -165,7 +165,7 @@ const BecomeAChef = () => {
 
           {/* Availability Selection */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-xl font-bold mb-2">What is your availability?</label>
+            <label className="block text-lg font-bold mb-2">What is your availability?</label>
             <select
               name="availability"
               value={formData2.availability}
@@ -182,7 +182,7 @@ const BecomeAChef = () => {
 
           {/* Cooking Level Selection */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-xl font-bold mb-2">What is your level of cooking?</label>
+            <label className="block text-lg font-bold mb-2">What is your level of cooking?</label>
             <select
               name="cokingLevel"
               value={formData2.cookingLevel}
@@ -199,7 +199,7 @@ const BecomeAChef = () => {
 
           {/* Reason for Joining Kravinz */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-xl font-bold mb-2">Why do you want to join Kravinz?</label>
+            <label className="block text-lg font-bold mb-2">Why do you want to join Kravinz?</label>
             <div className="flex flex-col">
               {["I need the extra money", "I love cooking", "Just exploring"].map((option) => (
                 <label key={option} className="flex items-center mb-2">
@@ -218,7 +218,7 @@ const BecomeAChef = () => {
 
           {/* Additional Comments Section */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-xl font-bold mb-2">Additional Comments</label>
+            <label className="block text-lg font-bold mb-2">Additional Comments</label>
             <textarea
               name="additionalComments"
               value={formData2.additionalComments}

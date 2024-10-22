@@ -11,7 +11,7 @@ const Navbar = () => {
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/contact", label: "Contact Us" },
-    { to: "/menu", label: "Book Chef" },
+    { to: "/makerequest", label: "Book Chef" },
     { to: "/order", label: "Order/Get Offer" },
     { to: "/become-chef", label: "Become a Kravinz Chef" },
     

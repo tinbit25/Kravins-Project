@@ -66,7 +66,7 @@ const HowItWorks = () => {
         loading="lazy"
       >
         <Link
-          to="/menu"
+          to="/makerequest"
           className="inline-block bg-[#C9A581] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-[#B89C6A] transition-all duration-300"
         >
           Get Started

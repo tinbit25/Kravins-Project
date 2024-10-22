@@ -33,7 +33,7 @@ const OurCommitment = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.4, 
+    threshold: 0.3, 
   });
 
   return (

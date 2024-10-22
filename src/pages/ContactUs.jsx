@@ -12,9 +12,9 @@ const ContactUs = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true); // Set visibility on mount
+    setIsVisible(true); 
     return () => {
-      setIsVisible(false); // Optionally set visibility to false on unmount
+      setIsVisible(false); 
     };
   }, []);
 
@@ -32,7 +32,7 @@ const ContactUs = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData), // Send formData as JSON
+        body: JSON.stringify(formData), 
       });
 
       if (response.ok) {

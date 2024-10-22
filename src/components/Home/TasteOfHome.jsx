@@ -9,8 +9,12 @@ const TasteOfHome = () => {
   const constantText = "Kraving delicious food but ";
   const phrases = [
     "don’t have the time or skills to cook it yourself?",
+    "don’t have the time or skills to cook it yourself?",
+    "Kraving the taste of home-cooked meals when you are away from your family?",
     "Kraving the taste of home-cooked meals when you are away from your family?",
     "Whether you're pressed for time or simply Krave the taste of home?",
+    "Whether you're pressed for time or simply Krave the taste of home?",
+    "Let us bring your culinary desires to you.",
     "Let us bring your culinary desires to you."
   ];
 

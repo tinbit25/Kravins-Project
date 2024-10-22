@@ -41,17 +41,17 @@ body{
     content: '';
     position: absolute;
     top: 50%;
-    width: 100px;  /* Length of the line */
-    height: 2px;   /* Thickness of the line */
-    background-color: #df500e; /* Line color */
+    width: 100px;  
+    height: 2px;   
+    background-color: #df500e; 
   }
   
   .section-title::before {
-    left: -110px;  /* Position to the left of the text */
+    left: -110px;  
   }
   
   .section-title::after {
-    right: -110px; /* Position to the right of the text */
+    right: -110px; 
   }
   .simg{
     border-top-left-radius: 150px;

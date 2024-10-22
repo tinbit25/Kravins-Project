@@ -12,7 +12,7 @@ import ScrollToTop from './ScrollToTop';
 const AboutUs = () => {
   return (
     <div className='overflow-hidden'>
-          <ScrollToTop /> {/* Ensure this is placed inside Router */}
+          <ScrollToTop /> 
     <Section1/>
     <AboutUs1/>
     <Ourstory />

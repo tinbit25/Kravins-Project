@@ -14,7 +14,6 @@ const Navbar = () => {
     { to: "/makerequest", label: "Book Chef" },
     { to: "/order", label: "Order/Get Offer" },
     { to: "/become-chef", label: "Become a Kravinz Chef" },
-    
   ];
 
   return (
@@ -42,6 +41,19 @@ const Navbar = () => {
             </NavLink>
           </li>
         ))}
+        
+        {/* Sign Up Button */}
+        <li>
+          <NavLink
+            to="/signup"
+            className={({ isActive }) => 
+              isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
+            }>
+            <span className="relative text-xl bg-orange-500 text-black py-2 px-4 rounded transition duration-300 hover:bg-orange-400">
+              Sign Up
+            </span>
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

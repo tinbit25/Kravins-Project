@@ -61,7 +61,7 @@ function App() {
           <Route path="/order" element={<MealOrderPage />} />
           <Route path="/become-chef" element={<BecomeAChef />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/signup" element={<SignUpPage onSignup={handleSignup} />} />
+          <Route path="/signups" element={<SignUpPage onSignup={handleSignup} />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
           {userRole === 'admin' && <Route path="/admin" element={<AdminPage />} />} 
         </Routes>

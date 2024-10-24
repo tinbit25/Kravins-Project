@@ -45,7 +45,7 @@ const Navbar = () => {
         {/* Sign Up Button */}
         <li>
           <NavLink
-            to="/signup"
+            to="/signups"
             className={({ isActive }) => 
               isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
             }>

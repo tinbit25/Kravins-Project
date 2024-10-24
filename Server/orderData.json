@@ -12,5 +12,19 @@
       "city": "43r",
       "zip": "234"
     }
+  },
+  {
+    "mealPreference": "vegetarian",
+    "numberOfMeals": 1,
+    "personalInfo": {
+      "name": "Tinbite Elias Emyew ",
+      "email": "tinbitelias25@gmail.com",
+      "phone": "343"
+    },
+    "address": {
+      "street": "frt",
+      "city": "43r",
+      "zip": "234"
+    }
   }
 ]

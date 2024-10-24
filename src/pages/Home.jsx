@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import TasteOfHome from '../components/Home/TasteOfHome';
 import Packages from '../components/Home/Packages';
-import Section3 from '../components/Home/Section3';
+import CulinaryRevolution from '../components/Home/CulinaryRevolution';
 import MeetOurChefs from '../components/Home/MeetOurChefs';
 import MealHighlights from '../components/Home/MealHighlights';
 import HowItWorks from '../components/Home/HowItWorks';
@@ -43,14 +43,14 @@ const Home = () => {
         />
         
         {/* Text Section */}
-        <div className="relative z-10"> {/* Ensure text is above the gradient */}
+        <div className="relative z-10"> 
           <TasteOfHome />
         </div>
       </motion.div>
 
       <HowItWorks id="how-it-works" />
       <Packages id="Packages" />
-      <Section3 id="section3" />
+      <CulinaryRevolution id="CulinaryRevolution" />
       <MeetOurChefs id="MeetOurChefs" />
       <BecomeChefHome/>
       <MealHighlights id="MealHighlights" />

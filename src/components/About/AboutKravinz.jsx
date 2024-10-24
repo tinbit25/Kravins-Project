@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AfricanFood from '../../assets/images/Logo/post1.jpg';
 
-const AboutUs1 = () => {
+const AboutKravinz = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -103,4 +103,4 @@ const AboutUs1 = () => {
   );
 };
 
-export default AboutUs1;
+export default AboutKravinz;

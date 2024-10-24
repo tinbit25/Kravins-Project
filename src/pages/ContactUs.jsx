@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Cbg from '../components/contact/Cbg';
+import GetInTouch from '../components/contact/GetInTouch';
 import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import ScrollToTop from './ScrollToTop';
 
@@ -51,7 +51,7 @@ const ContactUs = () => {
   return (
     <div className="bg-[#0D0D0D] text-white">
         <ScrollToTop />
-      <Cbg />
+      <GetInTouch />
       <div className={`transition-transform duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 '}`}>
         <div className="max-w-5xl mx-auto text-center mb-12">
           <h2 className="text-4xl Tfont font-bold text-[#C9A581] mb-4">Contact Us</h2>

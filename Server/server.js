@@ -4,7 +4,7 @@ const fs = require('fs');
 const app = express();
 
 app.use(cors());
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json()); 
 
 // Define the POST route for user sign-up
 app.post('/signup', (req, res) => {

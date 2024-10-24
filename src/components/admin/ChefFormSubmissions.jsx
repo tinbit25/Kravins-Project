@@ -21,7 +21,7 @@ const ChefFormSubmissions = () => {
   
     // Confirmation dialog
     const confirmDelete = window.confirm('Are you sure you want to delete this submission?');
-    if (!confirmDelete) return; // Abort deletion if user cancels
+    if (!confirmDelete) return; 
   
     try {
       const response = await fetch(`http://localhost:5000/submitchefform/${id}`, {
@@ -73,8 +73,8 @@ const renderTable = (data, handleDelete) => {
               <td className="px-4 py-2 border">
                 <button
                   onClick={() => {
-                    const itemId = item.id || item._id; // Use appropriate ID field
-                    console.log('Deleting item with id:', itemId); // Log the id
+                    const itemId = item.id || item._id; 
+                    console.log('Deleting item with id:', itemId); 
                     handleDelete(itemId);
                   }}
                   className="bg-red-500 text-white px-2 py-1 rounded"

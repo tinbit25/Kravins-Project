@@ -1,16 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUtensils } from 'react-icons/fa';
-import BackgroundImage from '../../assets/images/BackgroungPictures/AboutPageBg.jpg';
+import BackgroundImage from '../../assets/images/BackgroungPictures/ContactUsBg.jpg';
 
-const Section1 = () => {
+const GetInTouch = () => {
   const delay = 0; 
 
   return (
     <section className="relative py-20 px-6 text-white mb-48 overflow-hidden">
       {/* Animated Background */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 w-screen"
         style={{
           backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: 'cover',
@@ -26,29 +25,28 @@ const Section1 = () => {
           ease: "linear",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-70"></div> {/* Overlay for darkening the background */}
+        <div className="absolute inset-0 bg-black opacity-70"></div> 
       </motion.div>
 
       <div className="relative max-w-5xl mx-auto text-center mb-16">
         {/* Section Heading with Sliding Effect */}
         <motion.h2
           className="Tfont text-6xl font-extrabold text-[#C9A581] drop-shadow-lg my-36 mt-36"
-          initial={{ opacity: 0, scale: 1.5 }} 
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{  opacity: 0,scale:1.5 }} 
+          animate={{ opacity: 1 ,scale:1}} 
           transition={{
             duration: 2,
             delay: delay,
           }}
         >
-          About Us
+          Get in Touch
 
-          <div className="flex justify-center my-auto mb-14">
-            <FaUtensils className="text-6xl text-[#C9A581]" />
-          </div>
+          
         </motion.h2>
+
       </div>
     </section>
   );
 };
 
-export default Section1;
+export default GetInTouch;

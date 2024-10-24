@@ -47,7 +47,7 @@ const MeetOurChefs = () => {
                 <img
                   src={chef.image}
                   alt={chef.name}
-                  className="meetchef w-full h-60 object-cover shadow-lg rounded-md"
+                  className="meetchef w-full h-60 object-cover shadow-lg rounded-md"//meetchef in index.css
                 />
                 <h3 className="text-2xl font-semibold mt-4 mb-2 text-[#C9A581]">{chef.name}</h3>
                 <p className="text-sm">{chef.description}</p>

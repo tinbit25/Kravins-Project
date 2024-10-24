@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import FloatingShape from "../components/signup/FloatingShape";
 import { FaSpinner } from 'react-icons/fa';
 
-const adminEmails = ['admin@example.com', 'superuser@example.com']; // Add your admin emails here
+const adminEmails = ['admin@example.com', 'superuser@example.com']; 
 
 const LoginPage = ({ onLogin }) => {
   const [email, setEmail] = useState('');

@@ -1,7 +1,6 @@
 import { FaUtensils } from "react-icons/fa";
 import React from 'react';
 import BecomeChef from '../../assets/images/chef.jpg';
-
 import streetFood from '../../assets/images/pexels-dilara-yilmaz-988605972-28766047.jpg';
 import { motion } from 'framer-motion';
 import { useNavigate } from "react-router-dom";
@@ -79,7 +78,7 @@ const BecomeChefHome = () => {
 
             {/* Image slides from the right */}
             <motion.img
-              className="m-auto w-full lg:w-1/2"
+              className="roundimg m-auto w-full lg:w-1/2"//roundimg in index.css
               src={BecomeChef }
               alt="BecomeChef "
               style={{
@@ -95,7 +94,7 @@ const BecomeChefHome = () => {
           <div className="pb-4 flex flex-col lg:flex-row space-y-5 w-full">
             {/* Image slides from the left */}
             <motion.img
-              className="m-auto w-full lg:w-1/2"
+              className=" roundimg2 m-auto w-full lg:w-1/2"//roundimg2 in index.css
               src={streetFood}
               alt="African Food"
               style={{

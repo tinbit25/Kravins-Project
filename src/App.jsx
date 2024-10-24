@@ -17,7 +17,7 @@ import './index.css';
 
 const Layout = ({ children }) => {
   const location = useLocation();
-  const excludePaths = ['/login', '/signup'];
+  const excludePaths = ['/login', '/signups'];
   const shouldShowNavAndFooter = !excludePaths.includes(location.pathname);
 
   return (

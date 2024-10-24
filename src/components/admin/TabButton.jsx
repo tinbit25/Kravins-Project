@@ -1,4 +1,4 @@
-// src/components/admin/TabButton.jsx
+
 import React from 'react';
 
 const TabButton = ({ label, isActive, onClick }) => {

@@ -1,7 +1,8 @@
 import React, { useEffect, useState,useRef } from 'react';
 import AfricanFood from '../../assets/images/Pngtree—plate african food_16036974.webp';
 import { Link } from 'react-router-dom';
-const Section3 = () => {
+const CulinaryRevolution
+ = () => {
 const [isVisible, setIsVisible] = useState(false);
 const sectionRef = useRef(null);
 
@@ -10,7 +11,7 @@ const observer = new IntersectionObserver(
 ([entry]) => {
 setIsVisible(entry.isIntersecting);
 },
-{ threshold: 0.1 } // Trigger when 10% of the section is visible
+{ threshold: 0.1 } 
 );
 
 
@@ -92,4 +93,5 @@ DISAPPOINTMENTS?
 );
 };
 
-export default Section3; 
+export default CulinaryRevolution
+; 

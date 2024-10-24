@@ -23,59 +23,17 @@ body{
 
 
 }
- 
-  .section-title {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    margin: 0;
-  }
-  .section1Container{
-    transition-duration: 2s;
-  }
-  .containerSection2{
-    transition-duration: 2s;
-  }
-  .section-title::before,
-  .section-title::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 100px;  
-    height: 2px;   
-    background-color: #df500e; 
-  }
-  
-  .section-title::before {
-    left: -110px;  
-  }
-  
-  .section-title::after {
-    right: -110px; 
-  }
-  .simg{
+ /* BecomeHomeChef.jsx */
+  .roundimg{
     border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
-    opacity: 0.7;
-    
   }
-  .simg2{
-    border-top-right-radius: 250px;
-    border-bottom-left-radius: 250px;
-    opacity: 0.7;
-    
+  .roundimg2{
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 150px;
   }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
+/* //MeetOurChef */
 .meetchef{
   border-top-left-radius: 30%;
   border-bottom-right-radius: none;

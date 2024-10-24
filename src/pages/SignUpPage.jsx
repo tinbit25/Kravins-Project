@@ -5,7 +5,7 @@ import { User, Mail, Lock } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import FloatingShape from "../components/signup/FloatingShape";
 
-const adminEmails = ['admin@example.com', 'superuser@example.com']; // Add your admin emails here
+const adminEmails = ['admin@example.com', 'superuser@example.com']; 
 
 const SignUpPage = ({ onSignup }) => {
   const [name, setName] = useState('');

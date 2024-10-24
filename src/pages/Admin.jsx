@@ -3,7 +3,7 @@ import UserSignups from '../components/admin/UserSignups';
 import BookChefSubmission from '../components/admin/BookChefSubmission';
 import ChefFormSubmissions from '../components/admin/ChefFormSubmissions';
 import MealOrders from '../components/admin/MealOrders';
-import ContactInfo from '../components/admin/ContactInfo'; // Import the ContactInfo component
+import ContactInfo from '../components/admin/ContactInfo'; 
 
 const Admin = () => {
   const [activeTab, setActiveTab] = useState('users'); // Tracks the active tab
@@ -19,7 +19,7 @@ const Admin = () => {
         return <ChefFormSubmissions />;
       case 'meal':
         return <MealOrders />;
-      case 'contact': // New case for the contact info
+      case 'contact': 
         return <ContactInfo />;
       default:
         return <UserSignups />;

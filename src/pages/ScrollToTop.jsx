@@ -8,7 +8,7 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0); // Scrolls to the top of the page
   }, [pathname]);
 
-  return null; // This component does not render anything
+  return null; 
 };
 
 export default ScrollToTop;

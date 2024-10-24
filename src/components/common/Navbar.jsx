@@ -49,7 +49,7 @@ const Navbar = () => {
             className={({ isActive }) => 
               isActive ? 'relative font-bold text-orange-500' : 'relative text-white'
             }>
-            <span className="relative text-xl bg-orange-500 text-black py-2 px-4 rounded transition duration-300 hover:bg-orange-400">
+            <span className="relative text-lg bg-orange-500 text-black py-2 px-4 rounded transition duration-300 hover:bg-orange-400">
               Sign Up
             </span>
           </NavLink>

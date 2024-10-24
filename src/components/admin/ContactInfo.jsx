@@ -1,57 +1,52 @@
 import React, { useEffect, useState } from 'react';
 
-const MealOrders = () => {
-  const [mealOrders, setMealOrders] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+// ContactInfo Component
+const ContactInfo = () => {
+  const [contactData, setContactData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
+      
       try {
-        const response = await fetch('http://localhost:5000/submitMealOrder');
+        const response = await fetch('http://localhost:5000/contact');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        console.log('Fetched Meal Orders:', data);
-        setMealOrders(data);
+        console.log('Fetched contact data:', data);
+        setContactData(data); // Save the fetched data to state
       } catch (error) {
-        console.error('Error fetching meal orders:', error);
-        setError(error.message);
-      } finally {
-        setLoading(false);
+        console.error('Error fetching contact data:', error);
       }
     };
 
     fetchData();
   }, []);
 
-  // Handle delete order
+  // Handle contact deletion
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this submission?');
     if (!confirmDelete) return; // Abort deletion if user cancels
     try {
-      const response = await fetch(`http://localhost:5000/submitMealOrder/${id}`, {
+      const response = await fetch(`http://localhost:5000/contact/${id}`, {
         method: 'DELETE',
       });
 
       if (!response.ok) {
-        throw new Error('Failed to delete meal order');
+        throw new Error('Failed to delete contact');
       }
 
-      // Update state after deletion
-      setMealOrders(mealOrders.filter(order => order.id !== id));
+      // Update the contactData state to remove the deleted contact
+      setContactData(contactData.filter(contact => contact.id !== id));
     } catch (error) {
-      console.error('Error deleting meal order:', error);
+      console.error('Error deleting contact:', error);
     }
   };
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Meal Orders</h2>
-      {loading && <p className="text-gray-500">Loading meal orders...</p>}
-      {error && <p className="text-red-500">{`Error: ${error}`}</p>}
-      {renderTable(mealOrders, ['MealPreference', 'NumberOfMeals', 'PersonalInfo', 'Address', 'Actions'], handleDelete)}
+      <h2 className="text-xl font-bold mb-4">Contact Information</h2>
+      {renderTable(contactData, ['Name', 'Email', 'Phone', 'Actions'], handleDelete)}
     </div>
   );
 };
@@ -72,7 +67,7 @@ const renderTable = (data, columns, handleDelete) => {
           data.map((item, idx) => (
             <tr key={idx}>
               {columns.slice(0, -1).map((col, colIdx) => (
-                <td key={colIdx} className="px-4 py-2 border">{item[col] || 'N/A'}</td>
+                <td key={colIdx} className="px-4 py-2 border">{item[col.toLowerCase()] || 'N/A'}</td>
               ))}
               <td className="px-4 py-2 border">
                 <button
@@ -94,4 +89,4 @@ const renderTable = (data, columns, handleDelete) => {
   );
 };
 
-export default MealOrders;
+export default ContactInfo;

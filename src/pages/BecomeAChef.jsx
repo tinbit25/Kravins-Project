@@ -5,7 +5,7 @@ import sideImage from '../assets/images/pexels-yente-van-eynde-1263034-2403391.j
 import ScrollToTop from './ScrollToTop';
 
 const BecomeAChef = () => {
-  const [formData2, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     phone: '',
     location: '',
@@ -19,7 +19,7 @@ const BecomeAChef = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData2, [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleMultiSelectChange = (e) => {
@@ -43,7 +43,7 @@ const BecomeAChef = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData2),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
@@ -72,7 +72,6 @@ const BecomeAChef = () => {
   return (
     <div className='overflow-hidden'>
       <motion.div
-      
         style={{
           backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%), url(${BackgroundImage})`,
           backgroundSize: 'cover',
@@ -80,46 +79,40 @@ const BecomeAChef = () => {
           backgroundAttachment: 'fixed',
         }}
         className="min-h-full py-10 px-6"
-        initial={{ opacity: 0,scaleX:1.1 }}
-        animate={{ opacity: 1,scaleX:1 }}
+        initial={{ opacity: 0, scaleX: 1.1 }}
+        animate={{ opacity: 1, scaleX: 1 }}
         transition={{ duration: 1 }}
       >
         <div className="my-56">
-        <h1 className="Tfont text-5xl font-bold text-center text-[#C9A581] ">
-          Cook with Kravinz
-        </h1>
-        <img
-        className='mx-auto my'
-    loading="lazy"
-    decoding="async"
-    width="240"
-    height="240"
-    src="https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2.png"
-    alt=""
-    srcSet="https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2.png 240w, https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2-150x150.png 150w, https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2-210x210.png 210w"
-    sizes="(max-width: 240px) 100vw, 240px"
-/>
-</div>
-
+          <h1 className="text-5xl font-bold text-center text-[#C9A581]">
+            Cook with Kravinz
+          </h1>
+          <img
+            className='mx-auto my-4'
+            loading="lazy"
+            decoding="async"
+            width="240"
+            height="240"
+            src="https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2.png"
+            alt=""
+            srcSet="https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2.png 240w, https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2-150x150.png 150w, https://wgl-dsites.net/benoit/wp-content/uploads/2021/03/img_2-210x210.png 210w"
+            sizes="(max-width: 240px) 100vw, 240px"
+          />
+        </div>
       </motion.div>
       <ScrollToTop />
-      <div
-      
-      className="p-6 rounded-lg shadow-md my-28  lg:m-20">
-      <h2 className="text-2xl font-bold text-center text-[#C9A581]">Become a Kravinz Chef</h2>
-      <p className="text-lg mx-auto text-center">
-        Are you passionate about cooking and looking for a way to share your culinary skills with the world? Cook with Kravinz invites you to join our community of talented chefs and home cooks dedicated to creating delicious meals and unforgettable experiences. Whether you're an experienced chef or just starting your culinary journey, we welcome you to become a Kravinz Chef. As a member, you'll expand your skills, share your passion for cooking, and make a positive impact in your community. Join us and discover the joy of cooking with Kravinz!
-      </p>
-    </div>
+      <div className="p-6 rounded-lg shadow-md my-28 lg:m-20">
+        <h2 className="text-2xl font-bold text-center text-[#C9A581]">Become a Kravinz Chef</h2>
+        <p className="text-lg mx-auto text-center">
+          Are you passionate about cooking and looking for a way to share your culinary skills with the world? Cook with Kravinz invites you to join our community of talented chefs and home cooks dedicated to creating delicious meals and unforgettable experiences. Whether you're an experienced chef or just starting your culinary journey, we welcome you to become a Kravinz Chef. As a member, you'll expand your skills, share your passion for cooking, and make a positive impact in your community. Join us and discover the joy of cooking with Kravinz!
+        </p>
+      </div>
 
-      <div className="w-full flex lg:flex-row flex-col space-x-10 shadow-lg rounded-lg bg-black ">
-       
-
+      <div className="w-full flex lg:flex-row flex-col space-x-10 shadow-lg rounded-lg bg-black">
         {/* Form Sliding from Right */}
         <motion.form
           onSubmit={handleSubmit}
           className="w-full lg:w-1/2 flex flex-col justify-between p-9"
-          
         >
           {/* Name Input */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
@@ -127,7 +120,7 @@ const BecomeAChef = () => {
             <input
               type="text"
               name="name"
-              value={formData2.name}
+              value={formData.name}
               onChange={handleChange}
               required
               className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -141,7 +134,7 @@ const BecomeAChef = () => {
             <input
               type="tel"
               name="phone"
-              value={formData2.phone}
+              value={formData.phone}
               onChange={handleChange}
               required
               className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -155,7 +148,7 @@ const BecomeAChef = () => {
             <input
               type="text"
               name="location"
-              value={formData2.location}
+              value={formData.location}
               onChange={handleChange}
               required
               className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
@@ -168,10 +161,10 @@ const BecomeAChef = () => {
             <label className="block text-lg font-bold mb-2">What is your availability?</label>
             <select
               name="availability"
-              value={formData2.availability}
+              value={formData.availability}
               onChange={handleChange}
               required
-              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+              className="w-full p-3 border text-black focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
             >
               <option value="">Select your availability</option>
               <option value="Full-time (40 hours and above/week)">Full-time (40 hours and above/week)</option>
@@ -184,80 +177,73 @@ const BecomeAChef = () => {
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-lg font-bold mb-2">What is your level of cooking?</label>
             <select
-              name="cokingLevel"
-              value={formData2.cookingLevel}
+              name="cookingLevel"
+              value={formData.cookingLevel}
               onChange={handleChange}
               required
-              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+              className="w-full p-3 border text-black focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
             >
               <option value="">Select your cooking level</option>
-              <option value="I know how to cook">I know how to cook</option>
-              <option value="I have been cooking for people (as a business)">I have been cooking for people (as a business)</option>
-              <option value="I am a professional chef (gone to a catering school)">I am a professional chef (gone to a catering school)</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
             </select>
           </motion.div>
 
-          {/* Reason for Joining Kravinz */}
+          {/* Reasons Selection */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <label className="block text-lg font-bold mb-2">Why do you want to join Kravinz?</label>
-            <div className="flex flex-col">
-              {["I need the extra money", "I love cooking", "Just exploring"].map((option) => (
-                <label key={option} className="flex items-center mb-2">
-                  <input
-                    type="checkbox"
-                    value={option}
-                    checked={formData2.reason.includes(option)}
-                    onChange={handleMultiSelectChange}
-                    className="mr-2"
-                  />
-                  {option}
-                </label>
-              ))}
-            </div>
+            <select
+              name="reason"
+              multiple
+              onChange={handleMultiSelectChange}
+              className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
+            >
+              <option value="Share my love for cooking">Share my love for cooking</option>
+              <option value="Make new friends">Make new friends</option>
+              <option value="Gain experience">Gain experience</option>
+              <option value="Other">Other</option>
+            </select>
+            <small className="text-gray-500">Hold down the Ctrl (Windows) or Command (Mac) button to select multiple options.</small>
           </motion.div>
 
-          {/* Additional Comments Section */}
+          {/* Additional Comments */}
           <motion.div className="mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <label className="block text-lg font-bold mb-2">Additional Comments</label>
+            <label className="block text-lg font-bold mb-2">Any additional comments?</label>
             <textarea
               name="additionalComments"
-              value={formData2.additionalComments}
+              value={formData.additionalComments}
               onChange={handleChange}
               className="w-full p-3 border focus:outline-none focus:ring-2 focus:ring-[#C9A581] bg-transparent"
-              rows="4"
-              placeholder="Any additional comments or questions..."
+              placeholder="Your comments..."
+              rows="3"
             />
           </motion.div>
+
+          {/* Error Message */}
+          {error && <p className="text-red-600">{error}</p>}
 
           {/* Submit Button */}
           <motion.button
             type="submit"
-            className="bg-[#C9A581] text-white py-3 px-6 transition duration-300 hover:bg-[#A66F59]"
+            className="mt-4 bg-[#C9A581] text-white p-3 rounded hover:bg-[#A68664]"
             disabled={loading}
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            {loading ? 'Submitting...' : 'Submit'}
+            {loading ? 'Submitting...' : 'Join Now'}
           </motion.button>
-
-          {/* Error Message */}
-          {error && (
-            <motion.p
-              className="mt-4 text-red-500 text-center"
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
-            >
-              {error}
-            </motion.p>
-          )}
         </motion.form>
-         {/* Side Image Sliding from Left */}
-         <motion.img
-          src={sideImage}
-          alt=""
-          className="w-1/2 hidden lg:block"
-          initial={{ x: 100, opacity: 0 }} 
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        />
+
+        {/* Side Image */}
+        <div className="hidden lg:block lg:w-1/2 relative">
+          <img
+            src={sideImage}
+            alt="Chef"
+            className="h-full w-full object-cover rounded-lg"
+          />
+        </div>
       </div>
     </div>
   );

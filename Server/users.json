@@ -1,17 +1,7 @@
 [
   {
-    "name": "tibiy",
+    "name": "tinas",
     "email": "admin@example.com",
     "password": "123456"
-  },
-  {
-    "name": "tinas",
-    "email": "tinbitelias25@gmail.com",
-    "password": "123456"
-  },
-  {
-    "name": "Your Name",
-    "email": "your.email@example.com",
-    "password": "yourPassword"
   }
 ]

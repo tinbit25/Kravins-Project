@@ -25,7 +25,7 @@ const BecomeChefHome = () => {
           <div className="pb-8 flex flex-col lg:flex-row space-y-5 w-full">
             {/* Text content slides from the left */}
             <motion.div
-              className="my-auto border border-red-50 border-opacity-25 py-14 px-10 mx-5 lg:w-1/2"
+              className="my-auto border border-red-50 border-opacity-25 py-14 md:px-10 md:mx-5 lg:w-1/2"
               initial={{ x: -200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
@@ -54,7 +54,7 @@ const BecomeChefHome = () => {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-                    className="mt-4 max-w-2xl text-xl mx-auto text-gray-300"
+                    className="mt-4 max-w-2xl text-xl mx-0 md:mx-auto text-gray-300"
                   >
                     Do you have a passion for cooking? Dream of creating exquisite dishes that bring joy to others? Join the culinary world and unleash your creativity in the kitchen. Start your journey today!
                   </motion.p>
@@ -107,7 +107,7 @@ const BecomeChefHome = () => {
 
             {/* Text content slides from the right */}
             <motion.div
-              className="my-auto border border-red-50 border-opacity-25 py-32 px-10 mx-5 lg:w-1/2"
+              className="my-auto border border-red-50 border-opacity-25 py-32 md:px-10 md:mx-5 lg:w-1/2"
               initial={{ x: 200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}

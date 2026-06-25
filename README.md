@@ -17,7 +17,6 @@
 - [API Reference](#api-reference)
 - [Pages & Routes](#pages--routes)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
 
 ---
 
@@ -264,14 +263,3 @@ web: node Server/server.js
 
 The `heroku-postbuild` script in `Client/package.json` automatically installs and builds the frontend during Heroku deployment.
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Open a Pull Request

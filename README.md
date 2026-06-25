@@ -17,7 +17,6 @@
 - [API Reference](#api-reference)
 - [Pages & Routes](#pages--routes)
 - [Deployment](#deployment)
-- [Known Limitations](#known-limitations)
 - [Contributing](#contributing)
 
 ---
@@ -279,12 +278,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ---
 
-## 📄 License
-
-This project is licensed under the **ISC License**.
-
----
-
 <div align="center">
-  Made with ❤️ by the Kravinz Team
+  Made with ❤️ by Kravinz
 </div>
